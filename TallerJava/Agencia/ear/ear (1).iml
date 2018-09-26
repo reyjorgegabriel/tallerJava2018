@@ -8,9 +8,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: uy.com.antel:ejbs:ejb:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="ejbs (1)" />
     <orderEntry type="module" module-name="servlet (1)" />
-    <orderEntry type="library" name="Maven: uy.com.antel:primary-source:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="primary-source (1)" />
     <orderEntry type="module" module-name="logging (1)" />
   </component>
 </module>
