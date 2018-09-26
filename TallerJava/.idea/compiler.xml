@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ear (1)" />
+        <module name="ejbs (1)" />
+        <module name="logging (1)" />
+        <module name="primary-source (2)" />
+        <module name="servlet (1)" />
+      </profile>
+      <profile name="Annotation profile for ejbs (2)" enabled="true">
+        <sourceOutputDir name="../../Agencia/ejbs/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../Agencia/ejbs/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ejbs (2)" />
+      </profile>
+      <profile name="Annotation profile for logging (2)" enabled="true">
+        <sourceOutputDir name="../../../Agencia/projects/logging/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../../Agencia/projects/logging/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="logging (2)" />
+      </profile>
+      <profile name="Annotation profile for ear (2)" enabled="true">
+        <sourceOutputDir name="../../Agencia/ear/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../Agencia/ear/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ear (2)" />
+      </profile>
+      <profile name="Annotation profile for TallerJava" enabled="true">
+        <sourceOutputDir name="../../../Agencia/servlets/servlet/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../../Agencia/servlets/servlet/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="servlet (2)" />
+      </profile>
+      <profile name="Annotation profile for primary-source (1)" enabled="true">
+        <sourceOutputDir name="../../Intendencia/primary-source/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../Intendencia/primary-source/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="primary-source (1)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Agencia" target="1.5" />
+      <module name="ear (1)" target="1.5" />
+      <module name="ear (2)" target="1.5" />
+      <module name="ejbs (1)" target="1.5" />
+      <module name="ejbs (2)" target="1.5" />
+      <module name="Intendencia" target="1.5" />
+      <module name="logging (1)" target="1.5" />
+      <module name="logging (2)" target="1.5" />
+      <module name="primary-source (1)" target="1.5" />
+      <module name="primary-source (2)" target="1.5" />
+      <module name="projects (1)" target="1.5" />
+      <module name="projects (2)" target="1.5" />
+      <module name="servlet (1)" target="1.5" />
+      <module name="servlet (2)" target="1.5" />
+      <module name="servlets (1)" target="1.5" />
+      <module name="servlets (2)" target="1.5" />
+      <module name="TallerJava" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

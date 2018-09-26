@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+    <title>Gestión de tickets</title>
+</h:head>
+<h:body>
+    <h2>Ingresar una matrícula</h2>
+    <h:form>
+        <table>
+            <tr>
+                <td><h:outputText value = "Matrícula"/></td>
+                <td><h:inputText id = "entrada_id" value = "#{terminalBean.entrada}"
+                                 required="true" label="entrada_lb" /></td>
+                <td><h:message for ="entrada_id"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><h:commandButton action = "#{terminalBean.enviarMensaje}" value ="Enviar"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><h:commandButton type="sumbit" action = "index" value ="Volver"/></td>
+            </tr>
+        </table>
+        <h:messages style = "color:blue;margin:8px;" />
+    </h:form>
+</h:body>
+</html>

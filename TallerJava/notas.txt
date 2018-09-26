@@ -1,0 +1,254 @@
+﻿En Intellij crear un proyecto maven
+[v] Create from archetype
+Usar este arquetipo:
+org.apache.maven.archetypes:maven-archetype-j2ee-simple
+--------------------------------------------------------------------------------------------------
+Modificar el pom.xml del proyecto, el que está más cerca de la raíz del proyecto.
+(ej: C:\Users\Usuario\IdeaProjects\ProyectoEditorial2\faces01\pom.xml)
+Agregar las líneas con asterisco para que el proyecto funcione con el jdk 10.
+
+<plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.7.0</version>
+*		  <configuration>
+*			  <source>1.8</source>
+*			  <target>1.8</target>
+*		  </configuration>
+</plugin>
+--------------------------------------------------------------------------------------------------
+Modificar el pom.xml que está en el directorio servlets\servlet.
+(ej: C:\Users\Usuario\IdeaProjects\ProyectoEditorial2\faces01\servlets\servlet\pom.xml)
+Agregar dependencia para servlets.
+
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+    <scope>provided</scope>
+</dependency>
+--------------------------------------------------------------------------------------------------
+Borrar el archivo ejb-jar.xml. Este archivo está vacío.
+C:\Users\Usuario\IdeaProjects\ProyectoEditorial2\faces01\ejbs\src\main\resources\META-INF\ejb-jar.xml
+ejbs/src/main/resources/META-INF/ejb-jar.xml
+--------------------------------------------------------------------------------------------------
+El archivo web.xml no debe estar vacío.
+C:\Users\Usuario\IdeaProjects\ProyectoEditorial2\faces01\servlets\servlet\src\main\webapp\WEB-INF\web.xml
+servlets/servlet/src/main/webapp/WEB-INF/web.xml
+
+Copiar uno de internet o eliminarlo.
+Ejemplo de un archivo válido:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+
+</web-app>
+--------------------------------------------------------------------------------------------------
+JAVA FACES
+En el pom.xml del servlet agregar esta dependencia
+(Ej: )
+
+<dependency>
+<groupId>javax.faces</groupId>
+<artifactId>javax.faces-api</artifactId>
+<version>2.2</version>
+<scope>provided</scope>
+</dependency>
+
+Crear los .xhtml en el directorio webapp.
+(Ej: C:\Users\Usuario\IdeaProjects\ProyectoEditorial2\faces01\servlets\servlet\src\main\webapp\libro.xhtml)
+
+--------------------------------------------------------------------------------------------------
+Datasource
+
+crear directorios
+"\com\mysql\main" bajo "modules"
+
+C:\Users\Usuario\wildfly-13.0.0.Final\modules\com\mysql\main
+
+En "main" copiar "mysql-connector-java-8.0.12.jar" bajado de internet.
+También agregar un archivo "module.xml"
+
+<?xml version="1.0" encoding="UTF-8"?>
+	<module xmlns="urn:jboss:" name "com.mysql">
+		<resources>
+			<resource-root path="mysql-connector-java-8.0.12.jar" />
+		</resources>
+		<dependencies>
+			<module name="javax.api"/>
+			<module name="javax.transaction.api"/>
+		</dependencies>
+	</module>
+
+En "C:\Users\Usuario\wildfly-13.0.0.Final\standalone\configuration" modificar
+el archivo standalone.xml
+
+            <datasources>
+                <datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true" use-java-context="true">
+                    <connection-url>jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE</connection-url>
+                    <driver>h2</driver>
+                    <security>
+                        <user-name>sa</user-name>
+                        <password>sa</password>
+                    </security>
+                </datasource>
+				<datasource jndi-name="java:jboss/datasources/MySqlDS" pool-name="MySqlDS" enabled="true">
+					<connection-url>jdbc:mysql://localhost:3306/empleados_1</connection-url>
+					<driver>com.mysql</driver>
+					<transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+					<pool>
+						<min-pool-size>10</min-pool-size>
+						<max-pool-size>100</max-pool-size>
+						<prefill>true</prefill>
+					</pool>
+					<security>
+						<user-name>root</user-name>
+						<password></password>
+					</security>
+					<statement>
+						<prepared-statement-cache-size>32</prepared-statement-cache-size>
+						<share-prepared-statements>true</share-prepared-statements>
+					</statement>
+				</datasource>
+				<drivers>
+					<driver name="com.mysql" module="com.mysql">
+						<driver-class>com.mysql.jdbc.Driver</driver-class>
+					</driver>
+				    <driver name="h2" module="com.h2database.h2">
+                        <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
+                    </driver>
+                </drivers>
+            </datasources>
+----------------------------------------------------------------------------------------------
+•Publicar WebService en Jboss
+– Anotar la clase con @WebService
+– Anotar cada método con @WebMethod
+– Registrar la clase en el web.xml
+<web-app>
+    <servlet>
+        <servlet-name>SalesTax</servlet-name>                    //nombre del servlet
+        <servlet-class>org.jbia.ws.SalesTax</servlet-class>      //nombre de la clase
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SalesTax</servlet-name>                    //nombre del servlet
+        <url-pattern>/tax</url-pattern>                          //url para acceder al servlet
+    </servlet-mapping>
+</web-app>
+
+Ejemplo que funcionó:
+    <servlet>
+        <servlet-name>WebServiceServlet</servlet-name>
+        <servlet-class>uy.com.antel.WebServiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WebServiceServlet</servlet-name>
+        <url-pattern>/eco</url-pattern>
+    </servlet-mapping>
+
+Crear cliente web service con línea de comandos en JDK
+Ejecutar el comando wsimport -keep -verbose <wsdl>
+
+<wsdl> es la URL del webservice
+
+Entrar como administrador de Wildfly
+Ir a Runtime->Server->Monitor->Webservices->Endpoint
+Se muestra:
+
+ WSDL URL  http://localhost:8080/servlet/WebServiceServlet?wsdl
+
+Entonces el comando es
+wsimport -keep -verbose http://localhost:8080/servlet/WebServiceServlet?wsdl
+
+
+
+Esto genera los archivos necesarios para el cliente
+El ejecutable se ubica en el bin del jdk
+No importa librerías adicionales
+
+IMPORTANTE funciona compilando el cliente con JDK 8
+NO FUNCIONA CON JDK 10
+
+Se generan clases que luego se utilizan para implementar el cliente.
+
+
+
+
+----------------------------------------------------------------------------------------------
+
+It's possible to duplicate your Wildfly installation folder, but that takes up more space and you would
+ need to update both for every change. Instead it's possible to share the root folder and just create 2 standalones:
+
+In the installation folder, create new standalone1 and standalone2 folders from the default
+ (or use the default as one of them).
+In there, in the deployments folder you can choose whichever deployments you need.
+For the ports not to conflict, the configuration/standalone.xml of one of the standalones must be
+changed as shown here: change the number from 0 to something else like 200
+
+port-offset="${jboss.socket.binding.port-offset:200}
+
+Now go to Eclipse and in the Servers view create a new Server. Give it some suitable name and click next.
+
+Choose create new runtime on the bottom dropdown menu and click next.
+Give it a suitable runtime name and in the Server base directory choose the
+standalone folder name you want, like standalone1 above.
+Then just deploy there whichever of the files you need for that particular instance.
+Do the same for other instances with different offsets (in the above 1 instance will be at 8080 and the other at 8280).
+-----------------------------------------------------------------------------------------------------
+//En el mismo servidor
+copy C:\Users\Usuario\IdeaProjects\TallerJava\Intendencia\ear\target\intendencia.ear C:\Users\Usuario\wildfly-13.0.0.Final\standalone\deployments\*.*
+copy C:\Users\Usuario\IdeaProjects\TallerJava\Agencia\ear\target\agencia.ear C:\Users\Usuario\wildfly-13.0.0.Final\standalone\deployments\*.*
+C:\Users\Usuario\wildfly-13.0.0.Final\bin\standalone.bat
+
+
+//En diferentes servidores
+copy C:\Users\Usuario\IdeaProjects\TallerJava\Intendencia\ear\target\intendencia.ear C:\Users\Usuario\wildfly-13.0.0.Final\standalone\deployments\*.*
+C:\Users\Usuario\wildfly-13.0.0.Final\bin\standalone.bat
+
+copy C:\Users\Usuario\IdeaProjects\TallerJava\Agencia\ear\target\agencia.ear C:\Users\Usuario\wildfly-13.0.0.Final-copia\standalone\deployments\*.*
+C:\Users\Usuario\wildfly-13.0.0.Final-copia\bin\standalone.bat
+
+-----------------------------------------------------------------------------------------------------
+//En aguada. Diferentes servidores OFFSET de puertos
+
+
+
+copy d:\Users\c025648\Documents\Portables\IdeaProjects\TallerJava\Intendencia\ear\target\intendencia.ear D:\Users\c025648\wildfly-13.0.0.Final\standalone\deployments\*.*
+
+D:\Users\c025648\wildfly-13.0.0.Final\bin\standalone.bat
+
+
+copy d:\Users\c025648\Documents\Portables\IdeaProjects\TallerJava\Agencia\ear\target\agencia.ear D:\Users\c025648\wildfly-13.0.0.Final-copia\standalone\deployments
+
+
+D:\Users\c025648\wildfly-13.0.0.Final-copia\bin\standalone.bat -Djboss.socket.binding.port-offset=100
+
+http://localhost:8180/servlet/terminal.jsf
+
+-----------------------------------------------------------------------------------------------------
+DEBUG REMOTO Y CONFLICTO DE PUERTOS
+
+Para habilitar el debug remoto hay que exportar la variable de entorno
+
+CON EL SERVIDOR BAJO
+IR AL ARCHIVO standalone.conf.bat y quitar el comentario "rem" a la siguiente línea:
+rem set "JAVA_OPTS=%JAVA_OPTS% -agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n"
+
+Queda:
+
+export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n"
+ subir el servidor
+ En intellij
+ Run > Debug … > Edit Configurations …
+ Agregar la opción remote
+ cambiarle al puerto 8787
+
+Si hay dos instancias de Wildfly en ejecución y ambas tienen el mismo puerto de debug, da
+un conflicto. Configurar cada standalone.conf.bat con un número de puerto de debug diferente.
+
+Ejemplo:
+export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n"
+export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,address=8887,server=y,suspend=n"
+-----------------------------------------------------------------------------------------------------
+
+
+
+

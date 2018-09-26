@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia/ear" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia/ejbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia/primary-source" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia/projects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia/projects/logging" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia/servlets" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Agencia/servlets/servlet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia/ear" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia/ejbs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia/primary-source" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia/projects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia/projects/logging" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia/servlets" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Intendencia/servlets/servlet" charset="UTF-8" />
+  </component>
+</project>

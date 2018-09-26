@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+    <output url="file://$MODULE_DIR$/../../Agencia/ear/target/classes" />
+    <output-test url="file://$MODULE_DIR$/../../Agencia/ear/target/test-classes" />
+    <content url="file://$MODULE_DIR$/../../Agencia/ear/src/main/java">
+      <sourceFolder url="file://$MODULE_DIR$/../../Agencia/ear/src/main/java" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../Agencia/ear/src/test/java">
+      <sourceFolder url="file://$MODULE_DIR$/../../Agencia/ear/src/test/java" isTestSource="true" />
+    </content>
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="ejbs (2)" />
+    <orderEntry type="module" module-name="servlet (2)" />
+    <orderEntry type="module" module-name="primary-source (2)" />
+    <orderEntry type="module" module-name="logging (2)" />
+  </component>
+</module>
