@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "WebServiceServletService", targetNamespace = "http://antel.com.uy/", wsdlLocation = "http://localhost:8080/servlet/eco?wsdl")
+@WebServiceClient(name = "WebServiceServletService", targetNamespace = "http://antel.com.uy/", wsdlLocation = "http://localhost:8080/servlet-imm/eco?wsdl")
 public class WebServiceServletService
     extends Service
 {
@@ -30,7 +30,7 @@ public class WebServiceServletService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8080/servlet/eco?wsdl");
+            url = new URL("http://localhost:8080/servlet-imm/eco?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

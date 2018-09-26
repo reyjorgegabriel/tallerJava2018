@@ -47,4 +47,10 @@ public class WebServiceServlet {
 
         return retorno;
     }
+
+    @WebMethod
+    public String altaTicket(String prueba){
+        return "está andando " + prueba;
+
+    }
 }
