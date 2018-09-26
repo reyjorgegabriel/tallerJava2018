@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>ejbs</artifactId>
+  <artifactId>ejbs-imm</artifactId>
   <packaging>ejb</packaging>
 
   <name>enterprise java beans</name>
@@ -18,11 +18,11 @@
   <dependencies>
     <dependency>
       <groupId>uy.com.antel</groupId>
-      <artifactId>primary-source</artifactId>
+      <artifactId>primary-source-imm</artifactId>
     </dependency>
     <dependency>
       <groupId>uy.com.antel</groupId>
-      <artifactId>logging</artifactId>
+      <artifactId>logging-imm</artifactId>
     </dependency>
   </dependencies>
 

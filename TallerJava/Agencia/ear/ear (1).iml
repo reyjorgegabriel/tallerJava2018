@@ -4,17 +4,13 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../Intendencia/ear/src/main/java">
-      <sourceFolder url="file://$MODULE_DIR$/../../Intendencia/ear/src/main/java" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/../../Intendencia/ear/src/test/java">
-      <sourceFolder url="file://$MODULE_DIR$/../../Intendencia/ear/src/test/java" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: uy.com.antel:ejbs:ejb:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="servlet (1)" />
+    <orderEntry type="library" name="Maven: uy.com.antel:primary-source:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="logging (1)" />
   </component>
 </module>

@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>ear</artifactId>
+  <artifactId>ear-imm</artifactId>
   <packaging>ear</packaging>
 
   <name>ear assembly</name>
@@ -18,21 +18,21 @@
   <dependencies>
     <dependency>
       <groupId>uy.com.antel</groupId>
-      <artifactId>ejbs</artifactId>
+      <artifactId>ejbs-imm</artifactId>
       <type>ejb</type>
     </dependency>
     <dependency>
       <groupId>uy.com.antel</groupId>
-      <artifactId>servlet</artifactId>
+      <artifactId>servlet-imm</artifactId>
       <type>war</type>
     </dependency>
     <dependency>
       <groupId>uy.com.antel</groupId>
-      <artifactId>primary-source</artifactId>
+      <artifactId>primary-source-imm</artifactId>
     </dependency>
     <dependency>
       <groupId>uy.com.antel</groupId>
-      <artifactId>logging</artifactId>
+      <artifactId>logging-imm</artifactId>
     </dependency>
   </dependencies>
 

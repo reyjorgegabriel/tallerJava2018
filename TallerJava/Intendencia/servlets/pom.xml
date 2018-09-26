@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>servlets</artifactId>
+  <artifactId>servlets-imm</artifactId>
   <packaging>pom</packaging>
 
   <name>servlets</name>
