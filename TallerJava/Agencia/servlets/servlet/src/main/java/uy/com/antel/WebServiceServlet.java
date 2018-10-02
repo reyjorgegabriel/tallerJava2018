@@ -31,10 +31,58 @@ public interface WebServiceServlet {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "altaTicket", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.AltaTicket")
+    @ResponseWrapper(localName = "altaTicketResponse", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.AltaTicketResponse")
+    public String altaTicket(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns uy.com.antel.ResultadoOperacion
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "anularTicket", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.AnularTicket")
+    @ResponseWrapper(localName = "anularTicketResponse", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.AnularTicketResponse")
+    public ResultadoOperacion anularTicket(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Ticket arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "eco", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.Eco")
     @ResponseWrapper(localName = "ecoResponse", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.EcoResponse")
     public String eco(
-            @WebParam(name = "arg0", targetNamespace = "")
-                    String arg0);
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns uy.com.antel.ResultadoOperacion
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "venderTicket", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.VenderTicket")
+    @ResponseWrapper(localName = "venderTicketResponse", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.VenderTicketResponse")
+    public ResultadoOperacion venderTicket(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Ticket arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
 
 }

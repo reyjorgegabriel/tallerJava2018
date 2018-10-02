@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Agencia/Agencia.iml" filepath="$PROJECT_DIR$/Agencia/Agencia.iml" />
       <module fileurl="file://$PROJECT_DIR$/Intendencia/Intendencia.iml" filepath="$PROJECT_DIR$/Intendencia/Intendencia.iml" />
       <module fileurl="file://$PROJECT_DIR$/TallerJava.iml" filepath="$PROJECT_DIR$/TallerJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/Agencia/ear/ear (1).iml" filepath="$PROJECT_DIR$/Agencia/ear/ear (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/Intendencia/ear/ear (2).iml" filepath="$PROJECT_DIR$/Intendencia/ear/ear (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/Agencia/ejbs/ejbs (1).iml" filepath="$PROJECT_DIR$/Agencia/ejbs/ejbs (1).iml" />
@@ -19,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/Intendencia/servlets/servlet/servlet (2).iml" filepath="$PROJECT_DIR$/Intendencia/servlets/servlet/servlet (2).iml" />
       <module fileurl="file://$PROJECT_DIR$/Agencia/servlets/servlets (1).iml" filepath="$PROJECT_DIR$/Agencia/servlets/servlets (1).iml" />
       <module fileurl="file://$PROJECT_DIR$/Intendencia/servlets/servlets (2).iml" filepath="$PROJECT_DIR$/Intendencia/servlets/servlets (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/terminal/terminal.iml" filepath="$PROJECT_DIR$/terminal/terminal.iml" />
     </modules>
   </component>
 </project>

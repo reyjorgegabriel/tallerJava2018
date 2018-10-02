@@ -222,7 +222,7 @@ copy d:\Users\c025648\Documents\Portables\IdeaProjects\TallerJava\Agencia\ear\ta
 D:\Users\c025648\wildfly-13.0.0.Final-copia\bin\standalone.bat -Djboss.socket.binding.port-offset=100
 
 http://localhost:8180/servlet/terminal.jsf
-
+http://localhost:8080/servlet/terminal.jsf
 -----------------------------------------------------------------------------------------------------
 DEBUG REMOTO Y CONFLICTO DE PUERTOS
 
@@ -250,5 +250,5 @@ export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,address=8887,server=y,suspe
 -----------------------------------------------------------------------------------------------------
 
 
-
+wsimport -keep -verbose http://localhost:8080/servlet-imm/eco?wsdl
 
