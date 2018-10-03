@@ -33,7 +33,7 @@
       <file leaf-file-name="WebServiceServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
+            <state relative-caret-position="442">
               <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
             </state>
           </provider>
@@ -42,7 +42,7 @@
       <file leaf-file-name="WebServiceServletService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServletService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
+            <state relative-caret-position="476">
               <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
             </state>
           </provider>
@@ -51,7 +51,7 @@
       <file leaf-file-name="TerminalBean.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/TerminalBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-709">
+            <state relative-caret-position="17">
               <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -63,7 +63,7 @@
       <file leaf-file-name="ObjectFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/ObjectFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-799">
+            <state relative-caret-position="170">
               <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
             </state>
           </provider>
@@ -86,7 +86,7 @@
       <file leaf-file-name="AdminTicketsIntendencia.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/AdminTicketsIntendencia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1127">
+            <state relative-caret-position="1241">
               <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -190,19 +190,16 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="806" />
-    <option name="height" value="920" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="152" />
+    <option name="width" value="1300" />
+    <option name="height" value="793" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,175 +215,30 @@
             <path>
               <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Agencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="proyecto aparte terminal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Agencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="proyecto aparte terminal" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Agencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Agencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Agencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Agencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="antel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="antel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="antel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="terminal" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/proyecto aparte terminal" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -476,19 +328,19 @@
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.500625" side_tool="true" weight="0.31496063" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.205625" />
-      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.10125" />
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.911875" weight="0.33333334" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.499375" visible="true" weight="0.31496063" />
+      <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.499375" visible="true" weight="0.33246416" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20625" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.394375" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32939634" />
@@ -551,13 +403,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/TicketIntendencia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/TicketIntendencia.java" />
     <entry file="file://$PROJECT_DIR$/common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -779,9 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -818,28 +661,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServletService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="476">
           <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/TicketIntendencia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/TicketIntendencia.java" />
     <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
+        <state relative-caret-position="442">
           <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/AdminTicketsIntendencia.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
+        <state relative-caret-position="1241">
           <caret line="82" column="23" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -849,7 +686,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/ObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-799">
+        <state relative-caret-position="170">
           <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
         </state>
       </provider>
@@ -859,7 +696,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/TerminalBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-709">
+        <state relative-caret-position="17">
           <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
