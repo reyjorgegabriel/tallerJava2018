@@ -19,6 +19,9 @@ public class MainTerminal {
 
         PrintWriter salida = new PrintWriter(System.out, true);
 
+        //Creo la clase para poder conectarse con la agencia.
+        ConexionCliente conecxionAgencia = new ConexionCliente();
+
         salida.println("\nIngrese usuario:");
 
         try {
@@ -49,7 +52,7 @@ public class MainTerminal {
 
                 comando = entrada.readLine();
 
-                componentesComando = comando.split(" "); //separador
+                componentesComando = comando.split(" "); //separador. Podria ponerse \\s en vez de espacio.
 
                 componentesComando[0] = componentesComando[0].toLowerCase();
 
@@ -75,9 +78,23 @@ public class MainTerminal {
                             salida.println("Cantidad incorrecta de parámetros. Se espera una matrícula, fecha y hora del inicio del estacionamiento y los minutos de estacionamiento.");
                         } else {
                             String fechaYhora = componentesComando[2] + " " + componentesComando[3];
-                            TicketTerminal ticketTerminal = new TicketTerminal(componentesComando[1], fechaYhora, Integer.parseInt(componentesComando[4]));
-                            //LLAMAR A FUNCIONDE LA AGENCIA PARA PASARLE EL TICKET CREADO.
-                            salida.println("Ticket agregado con exito con los datos:: " +  ticketTerminal.toString());
+                            TicketTerminal ticketTerminal = null;
+
+                            int minutos;
+                            try{
+                                minutos = Integer.parseInt(componentesComando[4]);
+                                ticketTerminal = new TicketTerminal(componentesComando[1], fechaYhora, minutos);
+
+                                conecxionAgencia.enviarTicketAAgencia(ticketTerminal.toString());
+                                //LLAMAR A FUNCIONDE LA AGENCIA PARA PASARLE EL TICKET CREADO.
+                                salida.println("Ticket agregado con exito con los datos:: " +  ticketTerminal.toString());
+                            } catch (FormatoIncorrectoFechaException e) {
+                                salida.println("Por favor, ingres un formato de fecha y hora correctos. Solo se acepta dd/MM/yy hh:mm.\n");
+                                //e.printStackTrace();
+                            } catch(NumberFormatException ex) {
+                                salida.println("Los minutos ingresados \"" + componentesComando[4] +
+                                        "\" no son un valor entero. Ingrese un entero e inténtelo nuevmente.");
+                            }
                         }
                     }
                     break;
@@ -87,9 +104,19 @@ public class MainTerminal {
                         if (componentesComando.length != 3) {
                             salida.println("Cantidad incorrecta de parámetros. Se espera una matrícula y los minutos de estacionamiento. La fecha y hora se toman como las actuales.");
                         } else {
-                            TicketTerminal ticketTerminal = new TicketTerminal(componentesComando[1], Integer.parseInt(componentesComando[2]));
-                            //LLAMAR A FUNCIONDE LA AGENCIA PARA PASARLE EL TICKET CREADO.
-                            salida.println("Ticket agregado con exito con los datos:: " +  ticketTerminal.toString());
+                            int minutos;
+                            try {
+                                minutos = Integer.parseInt(componentesComando[2]);
+
+                                TicketTerminal ticketTerminal = new TicketTerminal(componentesComando[1], minutos);
+
+                                conecxionAgencia.enviarTicketAAgencia(ticketTerminal.toString());
+                                //LLAMAR A FUNCIONDE LA AGENCIA PARA PASARLE EL TICKET CREADO.
+                                salida.println("Ticket agregado con exito con los datos:: " + ticketTerminal.toString());
+                            } catch (NumberFormatException ex) {
+                                salida.println("Los minutos ingresados \"" + componentesComando[2] +
+                                        "\" no son un valor entero. Ingrese un entero e inténtelo nuevmente.");
+                            }
                         }
 
                     }
@@ -114,7 +141,7 @@ public class MainTerminal {
                     break;
 
                     default:
-                        salida.println("Comando inexistente. Ingrese un nuevo comando. Para ver la ayuda ingrese comando H");
+                        salida.println("Comando " + componentesComando[0] + " inexistente. Ingrese un nuevo comando. Para ver la ayuda ingrese comando H.");
                     break;
                 }
 
@@ -125,7 +152,7 @@ public class MainTerminal {
 
         } while (!componentesComando[0].equals("q"));
 
-        salida.println("\nFin de ingreso de tickets de estacionamiento");
+        salida.println("\nFin de ingreso de tickets de estacionamiento.");
 
         //VER SI VA PROCESO DE DESCONECXION DEL USUARIO.
     }

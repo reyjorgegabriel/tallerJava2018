@@ -9,6 +9,7 @@ import java.util.Date;
 public class TicketTerminal {
 
     private String matricula;
+    private Calendar fechaVenta;
     private Calendar fechaInicio;
     private int minutosEstacionamiento;
 
@@ -18,38 +19,43 @@ public class TicketTerminal {
 
         minutosEstacionamiento = minutos;
 
-        fechaInicio = Calendar.getInstance();
+        fechaVenta = Calendar.getInstance();
+
+        fechaInicio = fechaVenta;
     }
 
 
-    public TicketTerminal (String matricula, String fechaHora, int minutos){
+    public TicketTerminal (String matricula, String fechaHora, int minutos) throws FormatoIncorrectoFechaException {
 
         this.matricula = matricula;
 
         minutosEstacionamiento = minutos;
 
         try {
-            DateFormat formateador ;
-            Date fechaConHora;
-            formateador = new SimpleDateFormat("dd/MM/yy hh:mm");
-            fechaConHora = (Date)formateador.parse(fechaHora);
+            DateFormat formateador = new SimpleDateFormat("dd/MM/yy hh:mm");;
+            Date fechaConHora = (Date)formateador.parse(fechaHora);
             fechaInicio = Calendar.getInstance();
             fechaInicio.setTime(fechaConHora);
-            //System.out.println("Fecha ingresada " + fechaConHora );
         } catch (ParseException e) {
-            System.out.println("Error de formato :" + e);
+            System.out.println("\nError de formato de la fecha y hora ingresadas: " +  fechaHora);
+            throw new FormatoIncorrectoFechaException();
         }
+
+        fechaVenta = Calendar.getInstance();
 
     }
 
 
     public String toString() {
 
-        Date datePublicacion =  fechaInicio.getTime();
+        Date dateVenta =  fechaVenta.getTime();
+
+        Date dateInicio =  fechaInicio.getTime();
 
         SimpleDateFormat sdf1 = new SimpleDateFormat("dd/MM/yy hh:mm");
 
-        return "-Maticula: " + matricula + " -Fecha: " + sdf1.format(datePublicacion) + " -Minutos: " + minutosEstacionamiento;
+        return "-Maticula: " + matricula + " -Fecha Venta: " + sdf1.format(dateVenta) +
+                " -Fecha Inicio estacionamiento: " + sdf1.format(dateInicio) + " -Minutos: " + minutosEstacionamiento;
 
     }
 
@@ -62,11 +68,11 @@ public class TicketTerminal {
     }
 
     public Calendar getFechaInicio() {
-        return fechaInicio;
+        return fechaVenta;
     }
 
     public void setFechaInicio(Calendar fechaInicio) {
-        this.fechaInicio = fechaInicio;
+        this.fechaVenta = fechaInicio;
     }
 
     public int getMinutosEstacionamiento() {
