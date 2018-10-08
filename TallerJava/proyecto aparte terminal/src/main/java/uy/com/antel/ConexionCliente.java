@@ -8,6 +8,8 @@ public class ConexionCliente {
 
     private BufferedReader lectura;
 
+    private ObjectOutputStream SteamParaObjetos;
+
 
     public ConexionCliente() {
 
@@ -16,6 +18,8 @@ public class ConexionCliente {
             escritura = new PrintWriter(sock.getOutputStream(), true);
             lectura = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 
+            SteamParaObjetos = new ObjectOutputStream(sock.getOutputStream());
+
         } catch (IOException e) {
             System.out.println("Error intentando conectarse al socket 127.0.0.1 puerto 1500.\n");
             e.printStackTrace();
@@ -23,7 +27,7 @@ public class ConexionCliente {
     }
 
 
-    public String enviarTicketAAgencia(String ticket) {
+    public String enviarDatoAAgenciaString(String ticket) {
 
         escritura.println(ticket);
 
@@ -37,6 +41,28 @@ public class ConexionCliente {
         }
 
     }
+
+    public String enviarDatoAAgencia(Object Informacion) {
+
+        try {
+            SteamParaObjetos.writeObject(Informacion);
+        } catch (IOException e) {
+            System.out.println("Error intentando enviar objeto por el socket 127.0.0.1 puerto 1500.\n");
+            e.printStackTrace();
+        }
+
+        //leer respuesta del servidor (de la agencia).
+        try {
+            return lectura.readLine();
+        } catch (IOException e) {
+            System.out.println("Error intentando enviar informacion a la agencia: " + Informacion.toString() );
+            e.printStackTrace();
+            return "ERROR";
+        }
+
+    }
+
+
 
 //Eliminar esta funcion.
 /*    public static void main(String[] args){

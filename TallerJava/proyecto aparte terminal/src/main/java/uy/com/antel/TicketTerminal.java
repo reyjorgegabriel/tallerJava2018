@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public class TicketTerminal {
+public class TicketTerminal implements java.io.Serializable {
 
     private String matricula;
     private Calendar fechaVenta;
