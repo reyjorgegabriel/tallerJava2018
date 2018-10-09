@@ -12,7 +12,8 @@ public class mainServer {
             socketRecepcion = socket.accept();
             BufferedReader lectura;
             lectura = new BufferedReader(new InputStreamReader(socketRecepcion.getInputStream()));
-
+            String usuario;
+            String contraseña;
 
             ObjectInputStream SteamParaObjetos = new ObjectInputStream(socketRecepcion.getInputStream());
 
@@ -20,11 +21,27 @@ public class mainServer {
             PrintWriter escritura;
             escritura=new PrintWriter(socketRecepcion.getOutputStream(),true);
 
+            System.out.println("Esperando lectura de usuario cliente...");
+
+            usuario = lectura.readLine();
+
+            escritura.println("Usuario recibido");
+
+            System.out.println("Esperando contraseña del usuario " + usuario + "...");
+
+            contraseña = lectura.readLine();
+
+            escritura.println("Contraseña recibida");
+
+            System.out.println("Datos del usuario:: " + usuario + " Contraseña " + contraseña);
+
+            //PONERO CODIGO PARA VALIDAR EL USUARIO.
+
             int contadorIteraicones = 0;
 
             while(true) {
 
-                System.out.println("Esperando lectura de clientes...");
+                System.out.println("Esperando lectura datos de usuario " + usuario + "...");
                 Object ObjetoPasado = SteamParaObjetos.readObject();
 
                 if(ObjetoPasado instanceof TicketTerminal){

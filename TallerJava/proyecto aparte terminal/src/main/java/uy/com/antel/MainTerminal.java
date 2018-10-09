@@ -9,9 +9,10 @@ public class MainTerminal {
 
     public static void main(String[] arg) {
 
-        String usuario;
-        String contraseña;
+        String usuario = null;
+        String contraseña = null;
         String comando;
+        String respuesta;
 
         BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
@@ -25,7 +26,7 @@ public class MainTerminal {
         try {
             usuario = entrada.readLine();
         } catch (IOException e) {
-            salida.println("\nNo se pudo leer el usuario correctamente:");
+            salida.println("\nNo se pudo leer el usuario correctamente.");
             //e.printStackTrace();
         }
 
@@ -37,7 +38,11 @@ public class MainTerminal {
             //e.printStackTrace();
         }
 
-        //FUNCION PARA VALIDAR USUARIO Y CONTRASEÑA CON LA AGENCIA
+        respuesta = conecxionAgencia.enviarDatoAAgenciaString(usuario);
+
+        respuesta = conecxionAgencia.enviarDatoAAgenciaString(contraseña);
+
+        //FUNCION PARA VALIDAR USUARIO Y CONTRASEÑA CON LA AGENCIA Y RESPONDER EN CONSECUENCIA.
 
 
         salida.println("\nIngrese los comandos para venta y anulación de tickets:");
@@ -47,6 +52,8 @@ public class MainTerminal {
         do {
 
             try {
+
+                salida.println("Ingrese comando: ");
 
                 comando = entrada.readLine();
 
@@ -66,7 +73,7 @@ public class MainTerminal {
                                 " a partir de la fecha y hora actual (de venta del ticket).\n" +
                                 "A <Numero de Ticket> - Anula el ticket con el numero ingresado. Debe corresponder a esta agencia. \n" +
                                 "Observación: Si la fecha y la hora no están en el formato La fecha deben exactamente en formato dd/MM/yy hh:mm, no se procesará la solicitud.\n" +
-                                "Q - Termina la ejecución del programa\n");
+                                "Q - Termina la ejecución del programa\n\n");
                     }
                     break;
 
@@ -82,13 +89,13 @@ public class MainTerminal {
                                 minutos = Integer.parseInt(componentesComando[4]);
                                 TicketTerminal ticketTerminal = new TicketTerminal(componentesComando[1], fechaYhora, minutos);
 
-                                String respuesta = conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
+                                respuesta = conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
                                 if (! respuesta.equals("")){
                                     salida.println("Ticket agregado con exito Nro: " + respuesta);
-                                    salida.println("Datos ticket:: " +  ticketTerminal.toString());
+                                    salida.println("Datos ticket:: " +  ticketTerminal.toString() + "\n");
                                 } else {
                                     salida.println("ERROR!! EL TICKET NO PUDO SER AGREGADO");
-                                    salida.println("Datos ticket que no pudo ser creado:: " +  ticketTerminal.toString());
+                                    salida.println("Datos ticket que no pudo ser creado:: " +  ticketTerminal.toString() + "\n");
                                 }
 
                             } catch (FormatoIncorrectoFechaException e) {
@@ -96,7 +103,7 @@ public class MainTerminal {
                                 //e.printStackTrace();
                             } catch(NumberFormatException ex) {
                                 salida.println("Los minutos ingresados \"" + componentesComando[4] +
-                                        "\" no son un valor entero. Ingrese un entero e inténtelo nuevmente.");
+                                        "\" no son un valor entero. Ingrese un entero e inténtelo nuevmente.\n");
                             }
                         }
                     }
@@ -112,17 +119,17 @@ public class MainTerminal {
                                 minutos = Integer.parseInt(componentesComando[2]);
                                 TicketTerminal ticketTerminal = new TicketTerminal(componentesComando[1], minutos);
 
-                                String respuesta = conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
+                                respuesta = conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
                                 if (! respuesta.equals("")){
                                     salida.println("Ticket agregado con exito Nro: " + respuesta);
-                                    salida.println("Datos ticket:: " +  ticketTerminal.toString());
+                                    salida.println("Datos ticket:: " +  ticketTerminal.toString() + "\n");
                                 } else {
                                     salida.println("ERROR!! EL TICKET NO PUDO SER AGREGADO");
-                                    salida.println("Datos ticket que no pudo ser creado:: " +  ticketTerminal.toString());
+                                    salida.println("Datos ticket que no pudo ser creado:: " +  ticketTerminal.toString() + "\n");
                                 }
                             } catch(NumberFormatException ex) {
                                 salida.println("Los minutos ingresados " + componentesComando[2] +
-                                        " no son un valor entero. Ingrese un entero e inténtelo nuevmente.");
+                                        " no son un valor entero. Ingrese un entero e inténtelo nuevmente\n.");
                             }
                         }
 
@@ -140,11 +147,15 @@ public class MainTerminal {
                                 Integer NroTicket = Integer.parseInt(componentesComando[1]);
 
                                 salida.println("Eliminando ticket " + NroTicket + "...");
-                                String respuesta = conecxionAgencia.enviarDatoAAgencia(NroTicket);
-                                salida.println("Ticket " + componentesComando[1] + " anulado con exito.");
+                                respuesta = conecxionAgencia.enviarDatoAAgencia(NroTicket);
+                                if ( ! respuesta.equals("")) {
+                                    salida.println("Ticket " + componentesComando[1] + " anulado con exito.\n");
+                                } else {
+                                    salida.println("El Ticket " + componentesComando[1] + " no pudo ser anulado. Intente nuevamente o ingrese otro ticket.\n");
+                                }
                             } catch(NumberFormatException ex) {
                                 salida.println("El numero de ticket ingresado (" + componentesComando[1] +
-                                        ") no es un valor entero. Ingrese un entero e inténtelo nuevmente.");
+                                        ") no es un valor entero. Ingrese un entero e inténtelo nuevmente.\n");
                             }
                         }
                     }
@@ -156,7 +167,7 @@ public class MainTerminal {
                     break;
 
                     default:
-                        salida.println("Comando " + componentesComando[0] + " inexistente. Ingrese un nuevo comando. Para ver la ayuda ingrese comando H.");
+                        salida.println("Comando " + componentesComando[0] + " inexistente. Ingrese un nuevo comando. Para ver la ayuda ingrese comando H.\n");
                     break;
                 }
 

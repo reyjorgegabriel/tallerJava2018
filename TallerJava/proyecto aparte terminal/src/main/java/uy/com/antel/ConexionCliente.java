@@ -27,15 +27,15 @@ public class ConexionCliente {
     }
 
 
-    public String enviarDatoAAgenciaString(String ticket) {
+    public String enviarDatoAAgenciaString(String dato) {
 
-        escritura.println(ticket);
+        escritura.println(dato);
 
         //leer respuesta del servidor (de la agencia).
         try {
             return lectura.readLine();
         } catch (IOException e) {
-            System.out.println("Error intentando enviar ticket a la agencia: " + ticket );
+            System.out.println("Error intentando enviar datos a la agencia: " + dato );
             e.printStackTrace();
             return "ERROR";
         }
