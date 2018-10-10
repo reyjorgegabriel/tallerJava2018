@@ -15,9 +15,9 @@
         <module name="logging (2)" />
         <module name="primary-source (1)" />
         <module name="primary-source (2)" />
-        <module name="proyecto-aparte-terminal" />
         <module name="servlet (1)" />
         <module name="servlet (2)" />
+        <module name="terminal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,7 +35,6 @@
       <module name="primary-source (2)" target="1.5" />
       <module name="projects (1)" target="1.5" />
       <module name="projects (2)" target="1.5" />
-      <module name="proyecto-aparte-terminal" target="1.7" />
       <module name="servlet (1)" target="1.5" />
       <module name="servlet (2)" target="1.5" />
       <module name="servlets (1)" target="1.5" />
