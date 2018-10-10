@@ -14,11 +14,6 @@ public class WebServiceServlet {
         return mensaje;
     }
 
-    @WebMethod
-    public String altaTicket(String prueba){
-        return "está andando " + prueba;
-
-    }
 
     @WebMethod
     public ResultadoOperacion venderTicket(Ticket t, String agencia){
@@ -29,9 +24,16 @@ public class WebServiceServlet {
     }
 
     @WebMethod
-    public ResultadoOperacion anularTicket(Ticket t, String agencia){
-        ResultadoOperacion ro = new ResultadoOperacion();
+    public ResultadoOperacion anularTicket(int idTicket, String agencia){
+        AdminTicketsIntendencia ati = AdminTicketsIntendencia.getInstance();
+        ResultadoOperacion ro = ati.bajaTicket(idTicket,agencia);
+        System.out.println("Se pidio anular el ticket " + ro.getIdTicket());
+        System.out.println(ro.getCodResultado());
+        System.out.println(ro.getMsjResultado());
+        System.out.println(ro.getIdTicket());
+        System.out.println(ro.getImporte());
+
+
         return ro;
     }
-
 }

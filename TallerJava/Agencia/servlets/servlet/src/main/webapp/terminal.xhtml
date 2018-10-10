@@ -30,4 +30,28 @@
         <h:messages style = "color:blue;margin:8px;" />
     </h:form>
 </h:body>
+
+<h2>Ingresar un ticket</h2>
+<h:form>
+    <table>
+        <tr>
+            <td><h:outputText value = "Ticket"/></td>
+            <td><h:inputText id = "idTicket_id" value = "#{terminalBean.idTicket}"
+                             required="true" label="entrada_lb" /></td>
+            <td><h:message for ="idTicket_id"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><h:commandButton action = "#{terminalBean.anularTicket}" value ="Enviar"/></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><h:commandButton type="sumbit" action = "index" value ="Volver"/></td>
+        </tr>
+    </table>
+    <h:messages style = "color:blue;margin:8px;" />
+</h:form>
+
+
+
 </html>

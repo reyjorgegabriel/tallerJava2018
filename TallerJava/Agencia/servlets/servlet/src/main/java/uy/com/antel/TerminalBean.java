@@ -18,6 +18,17 @@ import java.util.GregorianCalendar;
 public class TerminalBean {
     private String entrada;
     private String mensaje;
+    private int idTicket;
+
+
+    public int getIdTicket() {
+        return idTicket;
+    }
+
+    public void setIdTicket(int idTicket) {
+        this.idTicket = idTicket;
+    }
+
     public String getEntrada() {
         return entrada;
     }
@@ -34,22 +45,27 @@ public class TerminalBean {
         this.mensaje = mensaje;
     }
 
+    public void anularTicket(){
+        WebServiceServletService svc = new WebServiceServletService();
+        WebServiceServlet wss = svc.getWebServiceServletPort();
+        int numTicket = getIdTicket();
+        ResultadoOperacion ro = wss.anularTicket(numTicket,"SuperAgente86");
+
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
+                                "Codigo: " + ro.getCodResultado() +
+                                ", Mensaje: " + ro.getMsjResultado() +
+                                ", Ticket: " + ro.getIdTicket() +
+                                ", Importe: " + ro.getImporte(), "respuesta:");
+        FacesContext.getCurrentInstance().addMessage(null, message);
+
+
+    }
+
+
     public void enviarMensaje(){
         WebServiceServletService svc = new WebServiceServletService();
         WebServiceServlet wss = svc.getWebServiceServletPort();
         String stringEntrada = getEntrada();
-        String salida = wss.eco(stringEntrada);
-        System.out.println("---------------------cliente webservice-------------------------");
-        System.out.println("Se envió: " + stringEntrada);
-        System.out.println("Se recibió: " + salida);
-        System.out.println("-----------------------------------------------------------------");
-
-        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
-                "entrada: " + entrada + "\n salida: " + salida,
-                "respuesta:");
-        FacesContext.getCurrentInstance().addMessage(null, message);
-
-
 
         Ticket t = new Ticket();
         t.setMatricula(stringEntrada);
@@ -67,7 +83,6 @@ public class TerminalBean {
 
         }
         t.setFechaHoraVenta(xmlGcVenta);
-
 
         GregorianCalendar gcInicio = new GregorianCalendar();
         gcInicio.set(Calendar.YEAR, 2018);
@@ -92,23 +107,10 @@ public class TerminalBean {
         System.out.println(ro.msjResultado);
 
 
-
-        /*
-        //Check out this code
-        // Create Date Object /
-        Date date = new Date();
-        XMLGregorianCalendar xmlDate = null;
-        GregorianCalendar gc = new GregorianCalendar();
-
-        gc.setTime(date);
-
-        try{
-            xmlDate = DatatypeFactory.newInstance().newXMLGregorianCalendar(gc);
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-         */
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
+                "matrícula: " + stringEntrada + "\n ticket: " + ro.getIdTicket(),
+                "respuesta:");
+        FacesContext.getCurrentInstance().addMessage(null, message);
 
 
     }

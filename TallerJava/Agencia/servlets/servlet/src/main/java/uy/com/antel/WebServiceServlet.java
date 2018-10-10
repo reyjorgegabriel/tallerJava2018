@@ -25,20 +25,6 @@ public interface WebServiceServlet {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "altaTicket", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.AltaTicket")
-    @ResponseWrapper(localName = "altaTicketResponse", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.AltaTicketResponse")
-    public String altaTicket(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      * @return
@@ -50,7 +36,7 @@ public interface WebServiceServlet {
     @ResponseWrapper(localName = "anularTicketResponse", targetNamespace = "http://antel.com.uy/", className = "uy.com.antel.AnularTicketResponse")
     public ResultadoOperacion anularTicket(
         @WebParam(name = "arg0", targetNamespace = "")
-        Ticket arg0,
+        int arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1);
 

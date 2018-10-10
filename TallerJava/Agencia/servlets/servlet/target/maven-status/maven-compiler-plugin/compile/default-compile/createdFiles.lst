@@ -1,7 +1,6 @@
 uy\com\antel\TerminalBean.class
 uy\com\antel\Eco.class
 uy\com\antel\package-info.class
-uy\com\antel\AltaTicketResponse.class
 uy\com\antel\WebServiceServlet.class
 uy\com\antel\WebServiceServletService.class
 uy\com\antel\ObjectFactory.class
@@ -9,7 +8,6 @@ uy\com\antel\AnularTicket.class
 uy\com\antel\ResultadoOperacion.class
 uy\com\antel\AnularTicketResponse.class
 uy\com\antel\VenderTicket.class
-uy\com\antel\AltaTicket.class
 uy\com\antel\VenderTicketResponse.class
 uy\com\antel\Ticket.class
 uy\com\antel\EcoResponse.class

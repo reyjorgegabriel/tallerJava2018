@@ -24,8 +24,6 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AltaTicket_QNAME = new QName("http://antel.com.uy/", "altaTicket");
-    private final static QName _AltaTicketResponse_QNAME = new QName("http://antel.com.uy/", "altaTicketResponse");
     private final static QName _AnularTicket_QNAME = new QName("http://antel.com.uy/", "anularTicket");
     private final static QName _AnularTicketResponse_QNAME = new QName("http://antel.com.uy/", "anularTicketResponse");
     private final static QName _Eco_QNAME = new QName("http://antel.com.uy/", "eco");
@@ -38,22 +36,6 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link AltaTicket }
-     * 
-     */
-    public AltaTicket createAltaTicket() {
-        return new AltaTicket();
-    }
-
-    /**
-     * Create an instance of {@link AltaTicketResponse }
-     * 
-     */
-    public AltaTicketResponse createAltaTicketResponse() {
-        return new AltaTicketResponse();
     }
 
     /**
@@ -105,14 +87,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Ticket }
-     * 
-     */
-    public Ticket createTicket() {
-        return new Ticket();
-    }
-
-    /**
      * Create an instance of {@link ResultadoOperacion }
      * 
      */
@@ -121,29 +95,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AltaTicket }{@code >}
+     * Create an instance of {@link Ticket }
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link AltaTicket }{@code >}
      */
-    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "altaTicket")
-    public JAXBElement<AltaTicket> createAltaTicket(AltaTicket value) {
-        return new JAXBElement<AltaTicket>(_AltaTicket_QNAME, AltaTicket.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AltaTicketResponse }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link AltaTicketResponse }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "altaTicketResponse")
-    public JAXBElement<AltaTicketResponse> createAltaTicketResponse(AltaTicketResponse value) {
-        return new JAXBElement<AltaTicketResponse>(_AltaTicketResponse_QNAME, AltaTicketResponse.class, null, value);
+    public Ticket createTicket() {
+        return new Ticket();
     }
 
     /**
