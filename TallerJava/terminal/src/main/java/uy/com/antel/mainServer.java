@@ -56,6 +56,8 @@ public class mainServer {
 
                     System.out.println("Numero de ticket recibido:: " + NroTicketAEliminar);
 
+                    //Llamar eliminacion de ticket.
+
                 }
                 escritura.println(contadorIteraicones);
 

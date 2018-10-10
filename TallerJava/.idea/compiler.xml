@@ -15,14 +15,15 @@
         <module name="logging (2)" />
         <module name="primary-source (1)" />
         <module name="primary-source (2)" />
+        <module name="proyecto-aparte-terminal" />
         <module name="servlet (1)" />
         <module name="servlet (2)" />
-        <module name="terminal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Agencia" target="1.5" />
       <module name="common" target="1.7" />
+      <module name="CursoJava" target="1.7" />
       <module name="ear (1)" target="1.5" />
       <module name="ear (2)" target="1.5" />
       <module name="ejbs (1)" target="1.5" />
@@ -34,6 +35,7 @@
       <module name="primary-source (2)" target="1.5" />
       <module name="projects (1)" target="1.5" />
       <module name="projects (2)" target="1.5" />
+      <module name="proyecto-aparte-terminal" target="1.7" />
       <module name="servlet (1)" target="1.5" />
       <module name="servlet (2)" target="1.5" />
       <module name="servlets (1)" target="1.5" />

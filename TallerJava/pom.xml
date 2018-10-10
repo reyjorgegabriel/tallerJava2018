@@ -14,8 +14,8 @@
   <modules>
     <module>Agencia</module>
     <module>Intendencia</module>
-    <module>terminal</module>
     <module>common</module>
+    <module>terminal</module>
   </modules>
 
   <distributionManagement>
