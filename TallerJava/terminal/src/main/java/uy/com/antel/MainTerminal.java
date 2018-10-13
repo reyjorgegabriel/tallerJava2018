@@ -21,6 +21,8 @@ public class MainTerminal {
         //Creo la clase para poder conectarse con la agencia.
         ConexionCliente conecxionAgencia = new ConexionCliente();
 
+        ResultadoOperacion RespuestaObjeto;
+
         salida.println("\nIngrese usuario:");
 
         try {
@@ -38,9 +40,13 @@ public class MainTerminal {
             //e.printStackTrace();
         }
 
-        respuesta = conecxionAgencia.enviarDatoAAgenciaString(usuario);
+        //VER DE OBTENER EL NOMBRE DE LA TERMINAL SE PONE HARDCODEADO AHORA.
 
-        respuesta = conecxionAgencia.enviarDatoAAgenciaString(contraseña);
+        String NombTerminal = "La Terminal";
+
+        Credenciales infoUsuario = new Credenciales(usuario, contraseña, NombTerminal );
+
+        respuesta = conecxionAgencia.enviarDatoAAgencia(infoUsuario);
 
         //FUNCION PARA VALIDAR USUARIO Y CONTRASEÑA CON LA AGENCIA Y RESPONDER EN CONSECUENCIA.
 

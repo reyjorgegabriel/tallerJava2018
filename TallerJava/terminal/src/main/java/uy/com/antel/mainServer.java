@@ -7,52 +7,74 @@ public class mainServer {
 
         try {
             ServerSocket socket = new ServerSocket(1500);
-            System.out.println("1");
+
+            System.out.println("Se inicia el servidor para recibir conexiones de la terminal.");
             Socket socketRecepcion = null;
             socketRecepcion = socket.accept();
             BufferedReader lectura;
             lectura = new BufferedReader(new InputStreamReader(socketRecepcion.getInputStream()));
             String usuario;
             String contraseña;
+            String terminal;
 
-            ObjectInputStream SteamParaObjetos = new ObjectInputStream(socketRecepcion.getInputStream());
+            ResultadoOperacion Respuesta;
 
+            ObjectInputStream StreamParaObjetosLectura = new ObjectInputStream(socketRecepcion.getInputStream());
 
             PrintWriter escritura;
             escritura=new PrintWriter(socketRecepcion.getOutputStream(),true);
 
-            System.out.println("Esperando lectura de usuario cliente...");
+            //Objeto para usar para enviar objeto de respuesta.
+            ObjectOutputStream SrteamParaObjetosRespuesta = new ObjectOutputStream(socketRecepcion.getOutputStream());
 
-            usuario = lectura.readLine();
+            System.out.println("Esperando lectura de usuario y terminal cliente...");
 
-            escritura.println("Usuario recibido");
+            Object ObjetoRecibido = StreamParaObjetosLectura.readObject();
 
-            System.out.println("Esperando contraseña del usuario " + usuario + "...");
+            if ( ! (ObjetoRecibido instanceof Credenciales)){
+                System.out.println("No se ha recibido credencial del usuario para conectarse.");
+                escritura.println("Error!!");
+                return;
+            }
 
-            contraseña = lectura.readLine();
+            SrteamParaObjetosRespuesta.writeObject("Recibido");
 
-            escritura.println("Contraseña recibida");
+            System.out.println("VER SI SE LLEGO ACA");
 
-            System.out.println("Datos del usuario:: " + usuario + " Contraseña " + contraseña);
+            Credenciales datosUsuario = (Credenciales) ObjetoRecibido;
+
+            usuario = datosUsuario.getUsuario();
+
+            contraseña = datosUsuario.getContraseña();
+
+            terminal = datosUsuario.getTerminal();
+
+            System.out.println("Usuario " + usuario + " recibido.");
+
+            System.out.println("Contraseña usada: " + contraseña + ".");
+
+            System.out.println("Terminal donde se conecta: " + terminal + ".");
 
             //PONERO CODIGO PARA VALIDAR EL USUARIO.
+
+            System.out.println("El usuario " + usuario + "se ha conectado con exito");
 
             int contadorIteraicones = 0;
 
             while(true) {
 
-                System.out.println("Esperando lectura datos de usuario " + usuario + "...");
-                Object ObjetoPasado = SteamParaObjetos.readObject();
+                System.out.println("Esperando lectura tickets del usuario " + usuario + "...");
+                ObjetoRecibido = StreamParaObjetosLectura.readObject();
 
-                if(ObjetoPasado instanceof TicketTerminal){
-                    TicketTerminal ticket = (TicketTerminal) ObjetoPasado;
+                if(ObjetoRecibido instanceof TicketTerminal){
+                    TicketTerminal ticket = (TicketTerminal) ObjetoRecibido;
 
                     System.out.println("Objeto ticket recibido:: " + ticket.toString());
 
                     //Llamar a la función que devuelve el número de ticket.
 
-                } else if (ObjetoPasado instanceof Integer){
-                    Integer NroTicketAEliminar = (Integer) ObjetoPasado;
+                } else if (ObjetoRecibido instanceof Integer){
+                    Integer NroTicketAEliminar = (Integer) ObjetoRecibido;
 
                     System.out.println("Numero de ticket recibido:: " + NroTicketAEliminar);
 
