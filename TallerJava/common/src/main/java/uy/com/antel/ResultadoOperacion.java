@@ -1,6 +1,13 @@
 package uy.com.antel;
 
-public class ResultadoOperacion {
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class ResultadoOperacion implements java.io.Serializable {
+
+    //Jorge, tuve que poner serializadle esta clase, sino no lo podía enviarla por la conexión a la terminal.
+    //También hago método toString para visualizar mas cómodo los datos.
+
     protected long idTicket;
     protected int importe;
     protected int codResultado;
@@ -36,6 +43,13 @@ public class ResultadoOperacion {
 
     public void setMsjResultado(String msjResultado) {
         this.msjResultado = msjResultado;
+    }
+
+    public String toString() {
+
+        return "Objeto ResultadoOperacion:: -Identificador de ticket: " + idTicket + " -Importe: " + importe +
+                " -Codigo Resultado: " + codResultado + " -Mensaje resultado: " + msjResultado;
+
     }
 
 

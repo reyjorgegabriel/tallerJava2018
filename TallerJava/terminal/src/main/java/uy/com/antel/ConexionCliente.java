@@ -10,6 +10,8 @@ public class ConexionCliente {
 
     private ObjectOutputStream SteamParaObjetos;
 
+    private ObjectInputStream StreamParaObjetosLectura;
+
 
     public ConexionCliente() {
 
@@ -20,6 +22,8 @@ public class ConexionCliente {
 
             SteamParaObjetos = new ObjectOutputStream(sock.getOutputStream());
 
+            StreamParaObjetosLectura = new ObjectInputStream(sock.getInputStream());
+
         } catch (IOException e) {
             System.out.println("Error intentando conectarse al socket 127.0.0.1 puerto 1500.\n");
             e.printStackTrace();
@@ -27,7 +31,32 @@ public class ConexionCliente {
     }
 
 
-    public String enviarDatoAAgenciaString(String dato) {
+    public Object enviarDatoAAgencia(Object Informacion) {
+
+        try {
+            SteamParaObjetos.writeObject(Informacion);
+        } catch (IOException e) {
+            System.out.println("Error intentando enviar datos a la agencia. Valor objeto intentado enviar: " + Informacion.toString());
+            e.printStackTrace();
+        }
+
+        //leer respuesta del servidor (de la agencia).
+        try {
+            Object objeto = StreamParaObjetosLectura.readObject();
+            return objeto;
+        } catch (IOException e) {
+            System.out.println("Error I/O intentando recibir respuesta de agencia. Valor objeto enviado: " + Informacion.toString() );
+            e.printStackTrace();
+            return "ERROR";
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error clase no encontrada intentando recibir respuesta de agencia. Valor objeto enviado: " + Informacion.toString() );
+            e.printStackTrace();
+            return "ERROR";
+        }
+
+    }
+
+    public String enviarDatoAAgenciaStringRespuestaString(String dato) {
 
         escritura.println(dato);
 
@@ -42,12 +71,12 @@ public class ConexionCliente {
 
     }
 
-    public String enviarDatoAAgencia(Object Informacion) {
+    public String enviarDatoAAgenciaRescuepstaString(Object Informacion) {
 
         try {
             SteamParaObjetos.writeObject(Informacion);
         } catch (IOException e) {
-            System.out.println("Error intentando enviar objeto por el socket 127.0.0.1 puerto 1500.\n");
+            System.out.println("Error intentando enviar datos a la agencia. Valor objeto intentado enviar: " + Informacion.toString());
             e.printStackTrace();
         }
 
@@ -55,46 +84,10 @@ public class ConexionCliente {
         try {
             return lectura.readLine();
         } catch (IOException e) {
-            System.out.println("Error intentando enviar informacion a la agencia: " + Informacion.toString() );
+            System.out.println("Error intentando recibir respuesta de agencia. Valor objeto enviado: " + Informacion.toString()  );
             e.printStackTrace();
             return "ERROR";
         }
 
     }
-
-
-
-//Eliminar esta funcion.
-/*    public static void main(String[] args){
-
-        try {Socket sock = null;
-            sock = new Socket("127.0.0.1",1500);
-
-            PrintWriter escritura;
-            BufferedReader teclado;
-            String linea;
-            teclado=new BufferedReader(new InputStreamReader(System.in));
-            escritura=new PrintWriter(sock.getOutputStream(),true);
-
-
-            BufferedReader lectura;
-            lectura = new BufferedReader(new InputStreamReader(sock.getInputStream()));
-
-
-
-            do {
-                linea=teclado.readLine();
-                escritura.println(linea);
-
-                //leer respuesta
-                String s = lectura.readLine();
-                System.out.println(s);
-
-            } while (linea.compareTo("#")!=0);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }*/
 }
