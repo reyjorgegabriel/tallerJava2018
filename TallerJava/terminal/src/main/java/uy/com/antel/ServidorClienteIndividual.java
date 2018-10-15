@@ -1,19 +1,28 @@
 package uy.com.antel;
 
-        import java.net.*;
-        import java.io.*;
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
 
-public class mainServer {
-    public static void main(String[] argumentos) {
+public class ServidorClienteIndividual implements Runnable {
 
+    private Socket socketRecepcion;
+
+    public ServidorClienteIndividual(Socket socketAAtender) {
+
+        socketRecepcion = socketAAtender;
+    }
+
+    @Override
+    public void run() {
         try {
-            ServerSocket socket = new ServerSocket(1500);
+            //ServerSocket socket = new ServerSocket(1500);
 
-            System.out.println("Se inicia el servidor para recibir conexiones de la terminal.");
-            Socket socketRecepcion;
-            socketRecepcion = socket.accept();
-            BufferedReader lectura;
-            lectura = new BufferedReader(new InputStreamReader(socketRecepcion.getInputStream()));
+            System.out.println("--Se inicia el servidor para atender a una nueva terminal que quiere conectarse.");
+            //Socket socketRecepcion;
+            //socketRecepcion = socket.accept();
+            ////BufferedReader lectura;
+            ////lectura = new BufferedReader(new InputStreamReader(socketRecepcion.getInputStream()));
             String usuario;
             String contraseña;
             String terminal;
@@ -62,13 +71,15 @@ public class mainServer {
 
             while (true) {
 
-                System.out.println("\nEsperando lectura tickets del usuario " + usuario + "...");
+                //System.out.println("\nEsperando lectura tickets del usuario " + usuario + "...");
                 ObjetoRecibido = StreamParaObjetosLectura.readObject();
+
+                System.out.println(" Transacción usuario " + usuario + ":");
 
                 if (ObjetoRecibido instanceof TicketTerminal) {
                     TicketTerminal ticket = (TicketTerminal) ObjetoRecibido;
 
-                    System.out.println("Ticket recibido:: " + ticket.toString());
+                    System.out.println("    Ticket recibido:: " + ticket.toString());
 
                     //ATENCION: SI NO SE INICIALIZA LA VARIABLE CON UN NEW SIEMPRE VIAJA EL MISMO VALOR A LA TERMINAL POR LA CONEXION,
                     //AUNQUE EN ESTA CLASE SE VEA CORRECTAMENTE EL VALOR ACTUALIZADO.
@@ -84,7 +95,7 @@ public class mainServer {
                 } else if (ObjetoRecibido instanceof Integer) {
                     Integer NroTicketAEliminar = (Integer) ObjetoRecibido;
 
-                    System.out.println("Numero de ticket recibido para eliminar:: " + NroTicketAEliminar);
+                    System.out.println("    Numero de ticket recibido para eliminar:: " + NroTicketAEliminar);
 
                     //ATENCION: SI NO SE INICIALIZA LA VARIABLE CON UN NEW SIEMPRE VIAJA EL MISMO VALOR A LA TERMINAL POR LA CONEXION,
                     //AUNQUE EN ESTA CLASE SE VEA CORRECTAMENTE EL VALOR ACTUALIZADO.
@@ -92,16 +103,16 @@ public class mainServer {
                     //QUE IMPREMENTAN LA CONEXION.
                     respuesta = new ResultadoOperacion();
 
-                    //Llamar eliminacion de ticket.
+                    //Llamar eliminación de ticket.
                     respuesta.setCodResultado(-3 + contadorIteraicones);
-                    respuesta.setMsjResultado("Error!!");
+                    respuesta.setMsjResultado("    Error!!");
 
 
                 } else if (ObjetoRecibido instanceof String) {
                     String mensaje = (String) ObjetoRecibido;
                     //Si se envia el texto salida entonces hay que salir del servidor.
                     if (mensaje.equals("salida")) {
-                        System.out.println("\n   ---El usuario ha finalizado la conexión.---");
+                        System.out.println("     ---El usuario " + usuario + " ha finalizado la conexión.---");
 
                         //Se envia mensaje a cliente que se cierra el servidor
                         SrteamParaObjetosRespuesta.writeObject("salida");
@@ -115,9 +126,9 @@ public class mainServer {
 
                 SrteamParaObjetosRespuesta.writeObject(respuesta);
 
-                System.out.println("Respuesta enviada a la terminal: " + respuesta.toString());
+                System.out.println("   Respuesta enviada a la terminal: " + respuesta.toString());
 
-                System.out.println("Iteracion numero: " + contadorIteraicones);
+                System.out.println("   Iteracion numero: " + contadorIteraicones);
 
                 contadorIteraicones++;
 

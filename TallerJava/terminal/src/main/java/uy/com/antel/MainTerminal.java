@@ -102,7 +102,7 @@ public class MainTerminal {
 
                                 RespuestaObjeto = (ResultadoOperacion) conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
 
-                                salida.println("Respuesta de la agencia: " + RespuestaObjeto);
+                                salida.println("-Respuesta de la agencia: " + RespuestaObjeto.toString());
 
                                 if ( RespuestaObjeto.codResultado >= 0){
                                     salida.println("    Ticket agregado con exito Nro: " + RespuestaObjeto.getIdTicket());
@@ -140,7 +140,7 @@ public class MainTerminal {
 
                                 RespuestaObjeto = (ResultadoOperacion) conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
 
-                                salida.println("Respuesta de la agencia: " + RespuestaObjeto);
+                                salida.println("-Respuesta de la agencia: " + RespuestaObjeto.toString());
 
                                 if ( RespuestaObjeto.codResultado >= 0) {
                                     salida.println("    Ticket agregado con exito Nro: " + RespuestaObjeto.getIdTicket());
@@ -176,7 +176,7 @@ public class MainTerminal {
 
                                 RespuestaObjeto = (ResultadoOperacion) conecxionAgencia.enviarDatoAAgencia(NroTicket);
 
-                                salida.println("Respuesta de la agencia: " + RespuestaObjeto);
+                                salida.println("-Respuesta de la agencia: " + RespuestaObjeto.toString());
 
                                 if ( RespuestaObjeto.codResultado >= 0) {
                                     salida.println("    Ticket " + componentesComando[1] + " anulado con exito.");
