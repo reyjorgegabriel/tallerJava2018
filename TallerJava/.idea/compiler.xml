@@ -15,6 +15,7 @@
         <module name="logging (2)" />
         <module name="primary-source (1)" />
         <module name="primary-source (2)" />
+        <module name="servlet" />
         <module name="servlet (1)" />
         <module name="servlet (2)" />
         <module name="terminal" />
@@ -35,6 +36,7 @@
       <module name="primary-source (2)" target="1.5" />
       <module name="projects (1)" target="1.5" />
       <module name="projects (2)" target="1.5" />
+      <module name="servlet" target="1.5" />
       <module name="servlet (1)" target="1.5" />
       <module name="servlet (2)" target="1.5" />
       <module name="servlets (1)" target="1.5" />

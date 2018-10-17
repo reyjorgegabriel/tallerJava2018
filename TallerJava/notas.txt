@@ -158,7 +158,7 @@ Se muestra:
 Entonces el comando es
 wsimport -keep -verbose http://localhost:8080/servlet/WebServiceServlet?wsdl
 
-
+wsimport -keep -verbose http://localhost:8080/servlet-imm/eco?wsdl
 
 Esto genera los archivos necesarios para el cliente
 El ejecutable se ubica en el bin del jdk

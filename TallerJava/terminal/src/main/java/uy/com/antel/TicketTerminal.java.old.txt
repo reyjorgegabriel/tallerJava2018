@@ -9,18 +9,9 @@ import java.util.Date;
 public class TicketTerminal implements java.io.Serializable {
 
     private String matricula;
-
     private Calendar fechaVenta;
     private Calendar fechaInicio;
     private int minutosEstacionamiento;
-
-    public TicketTerminal(){
-        this.matricula = "";
-        this.fechaVenta = Calendar.getInstance();
-        this.fechaInicio = Calendar.getInstance();
-        this.minutosEstacionamiento=0;
-    }
-
 
     public TicketTerminal (String matricula, int minutos){
 
@@ -77,19 +68,11 @@ public class TicketTerminal implements java.io.Serializable {
     }
 
     public Calendar getFechaInicio() {
-        return fechaInicio;
+        return fechaVenta;
     }
 
     public void setFechaInicio(Calendar fechaInicio) {
         this.fechaVenta = fechaInicio;
-    }
-
-    public Calendar getFechaVenta() {
-        return fechaVenta;
-    }
-
-    public void setFechaVenta(Calendar fechaVenta) {
-        this.fechaVenta = fechaVenta;
     }
 
     public int getMinutosEstacionamiento() {

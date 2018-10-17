@@ -16,17 +16,17 @@ public class WebServiceServlet {
 
 
     @WebMethod
-    public ResultadoOperacion venderTicket(Ticket t, String agencia){
+    public ResultadoOperacionPosta venderTicket(Ticket t, String agencia){
         AdminTicketsIntendencia ati = AdminTicketsIntendencia.getInstance();
         int importe = ati.calcularImporteTicket(t);
-        ResultadoOperacion ro = ati.altaTicket(t, agencia,importe);
+        ResultadoOperacionPosta ro = ati.altaTicket(t, agencia,importe);
         return ro;
     }
 
     @WebMethod
-    public ResultadoOperacion anularTicket(int idTicket, String agencia){
+    public ResultadoOperacionPosta anularTicket(int idTicket, String agencia){
         AdminTicketsIntendencia ati = AdminTicketsIntendencia.getInstance();
-        ResultadoOperacion ro = ati.bajaTicket(idTicket,agencia);
+        ResultadoOperacionPosta ro = ati.bajaTicket(idTicket,agencia);
         System.out.println("Se pidio anular el ticket " + ro.getIdTicket());
         System.out.println(ro.getCodResultado());
         System.out.println(ro.getMsjResultado());

@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/ServletServidorAgenciaATerminal", loadOnStartup = 1) //define como se va a acceder al servlet (parte de la url que lo identifica)
+@WebServlet(urlPatterns = "/ServletServidorAgenciaATerminales", loadOnStartup = 1) //define como se va a acceder al servlet (parte de la url que lo identifica)
 //loadOnStartup sirve para decirle al servidor que arranque al inicio del servidor o a demanda.
-public class ServletServidorAgenciaATerminal extends HttpServlet {
+public class ServletServidorAgenciaATerminales extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws SecurityException, IOException, ServletException {

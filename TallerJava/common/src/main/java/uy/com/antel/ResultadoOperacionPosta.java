@@ -3,15 +3,19 @@ package uy.com.antel;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class ResultadoOperacion implements java.io.Serializable {
+public class ResultadoOperacionPosta implements java.io.Serializable {
 
     //Jorge, tuve que poner serializadle esta clase, sino no lo podía enviarla por la conexión a la terminal.
     //También hago método toString para visualizar mas cómodo los datos.
 
+    protected int codResultado;
     protected long idTicket;
     protected int importe;
-    protected int codResultado;
     protected String msjResultado;
+
+    public ResultadoOperacionPosta() {
+        //constructor vacio.
+    }
 
     public long getIdTicket() {
         return idTicket;

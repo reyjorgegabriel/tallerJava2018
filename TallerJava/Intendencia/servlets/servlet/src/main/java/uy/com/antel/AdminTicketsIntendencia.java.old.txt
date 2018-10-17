@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -25,12 +26,11 @@ public class AdminTicketsIntendencia {
     }
 
 
-    public ResultadoOperacionPosta altaTicket(Ticket t, String agencia, int importe) {
-        System.out.println("AdminTicketsIntendencia.altaTicket()");
-
-        ResultadoOperacionPosta ro = new ResultadoOperacionPosta();
+    public ResultadoOperacion altaTicket(Ticket t, String agencia, int importe) {
+        ResultadoOperacion ro = new ResultadoOperacion();
         InitialContext initContext = null;
         try {
+            System.out.println("AP paso2");
             initContext = new InitialContext();
             DataSource ds;
             ds = (DataSource) initContext.lookup("java:jboss/datasources/MySqlDS2");
@@ -85,13 +85,14 @@ public class AdminTicketsIntendencia {
         return importe;
     }
 
-    public ResultadoOperacionPosta bajaTicket(int idTicket, String agencia){
-        System.out.println("AdminTicketsIntendencia.bajaTicket()");
-        ResultadoOperacionPosta ro = new ResultadoOperacionPosta();
-        ro.setIdTicket(idTicket);
-        InitialContext initContext = null;
+    public ResultadoOperacion bajaTicket(int idTicket, String agencia){
 
+        ResultadoOperacion ro = new ResultadoOperacion();
+        ro.setIdTicket(idTicket);
+
+        InitialContext initContext = null;
         try {
+            System.out.println("baja ticket");
             initContext = new InitialContext();
             DataSource ds;
             ds = (DataSource) initContext.lookup("java:jboss/datasources/MySqlDS2");
@@ -162,6 +163,7 @@ public class AdminTicketsIntendencia {
         InitialContext initContext = null;
         List<TicketIntendencia> lista = new ArrayList<TicketIntendencia>();
         try {
+            System.out.println("AP paso2");
             initContext = new InitialContext();
             DataSource ds;
             ds = (DataSource) initContext.lookup("java:jboss/datasources/MySqlDS2");

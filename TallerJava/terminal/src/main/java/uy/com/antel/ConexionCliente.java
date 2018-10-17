@@ -16,7 +16,7 @@ public class ConexionCliente {
     public ConexionCliente() {
 
         try {
-            Socket sock = new Socket("127.0.0.1", 1500);
+            Socket sock = new Socket("127.0.0.1", 1501);
             escritura = new PrintWriter(sock.getOutputStream(), true);
             lectura = new BufferedReader(new InputStreamReader(sock.getInputStream()));
 
@@ -45,11 +45,11 @@ public class ConexionCliente {
             Object objeto = StreamParaObjetosLectura.readObject();
             return objeto;
         } catch (IOException e) {
-            System.out.println("Error I/O intentando recibir respuesta de agencia. Valor objeto enviado: " + Informacion.toString() );
+            System.out.println("Clase ConexionCliente:: Error I/O intentando recibir respuesta de agencia. Valor objeto enviado: " + Informacion.toString() );
             e.printStackTrace();
             return "ERROR";
         } catch (ClassNotFoundException e) {
-            System.out.println("Error clase no encontrada intentando recibir respuesta de agencia. Valor objeto enviado: " + Informacion.toString() );
+            System.out.println("Clase ConexionCliente:: Error clase no encontrada intentando recibir respuesta de agencia. Valor objeto enviado: " + Informacion.toString() );
             e.printStackTrace();
             return "ERROR";
         }

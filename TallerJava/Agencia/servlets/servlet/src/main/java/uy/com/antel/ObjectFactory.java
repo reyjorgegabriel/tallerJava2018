@@ -24,12 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _AnularTicket_QNAME = new QName("http://antel.com.uy/", "anularTicket");
     private final static QName _AnularTicketResponse_QNAME = new QName("http://antel.com.uy/", "anularTicketResponse");
     private final static QName _Eco_QNAME = new QName("http://antel.com.uy/", "eco");
-    private final static QName _EcoResponse_QNAME = new QName("http://antel.com.uy/", "ecoResponse");
-    private final static QName _VenderTicket_QNAME = new QName("http://antel.com.uy/", "venderTicket");
     private final static QName _VenderTicketResponse_QNAME = new QName("http://antel.com.uy/", "venderTicketResponse");
+    private final static QName _AnularTicket_QNAME = new QName("http://antel.com.uy/", "anularTicket");
+    private final static QName _VenderTicket_QNAME = new QName("http://antel.com.uy/", "venderTicket");
+    private final static QName _EcoResponse_QNAME = new QName("http://antel.com.uy/", "ecoResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: uy.com.antel
@@ -39,11 +39,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AnularTicket }
+     * Create an instance of {@link Eco }
      * 
      */
-    public AnularTicket createAnularTicket() {
-        return new AnularTicket();
+    public Eco createEco() {
+        return new Eco();
     }
 
     /**
@@ -55,11 +55,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Eco }
+     * Create an instance of {@link VenderTicketResponse }
      * 
      */
-    public Eco createEco() {
-        return new Eco();
+    public VenderTicketResponse createVenderTicketResponse() {
+        return new VenderTicketResponse();
+    }
+
+    /**
+     * Create an instance of {@link AnularTicket }
+     * 
+     */
+    public AnularTicket createAnularTicket() {
+        return new AnularTicket();
     }
 
     /**
@@ -79,22 +87,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link VenderTicketResponse }
-     * 
-     */
-    public VenderTicketResponse createVenderTicketResponse() {
-        return new VenderTicketResponse();
-    }
-
-    /**
-     * Create an instance of {@link ResultadoOperacion }
-     * 
-     */
-    public ResultadoOperacion createResultadoOperacion() {
-        return new ResultadoOperacion();
-    }
-
-    /**
      * Create an instance of {@link Ticket }
      * 
      */
@@ -103,25 +95,16 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AnularTicket }{@code >}
+     * Create an instance of {@link ResultadoOperacionPosta }
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link AnularTicket }{@code >}
      */
-    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "anularTicket")
-    public JAXBElement<AnularTicket> createAnularTicket(AnularTicket value) {
-        return new JAXBElement<AnularTicket>(_AnularTicket_QNAME, AnularTicket.class, null, value);
+    public ResultadoOperacionPosta createResultadoOperacion() {
+        return new ResultadoOperacionPosta();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AnularTicketResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AnularTicketResponse }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link AnularTicketResponse }{@code >}
      */
     @XmlElementDecl(namespace = "http://antel.com.uy/", name = "anularTicketResponse")
     public JAXBElement<AnularTicketResponse> createAnularTicketResponse(AnularTicketResponse value) {
@@ -129,12 +112,8 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Eco }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Eco }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link Eco }{@code >}
      */
     @XmlElementDecl(namespace = "http://antel.com.uy/", name = "eco")
     public JAXBElement<Eco> createEco(Eco value) {
@@ -142,25 +121,26 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link EcoResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link VenderTicketResponse }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link EcoResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "ecoResponse")
-    public JAXBElement<EcoResponse> createEcoResponse(EcoResponse value) {
-        return new JAXBElement<EcoResponse>(_EcoResponse_QNAME, EcoResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "venderTicketResponse")
+    public JAXBElement<VenderTicketResponse> createVenderTicketResponse(VenderTicketResponse value) {
+        return new JAXBElement<VenderTicketResponse>(_VenderTicketResponse_QNAME, VenderTicketResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VenderTicket }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AnularTicket }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link VenderTicket }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "anularTicket")
+    public JAXBElement<AnularTicket> createAnularTicket(AnularTicket value) {
+        return new JAXBElement<AnularTicket>(_AnularTicket_QNAME, AnularTicket.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link VenderTicket }{@code >}}
+     * 
      */
     @XmlElementDecl(namespace = "http://antel.com.uy/", name = "venderTicket")
     public JAXBElement<VenderTicket> createVenderTicket(VenderTicket value) {
@@ -168,16 +148,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link VenderTicketResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link EcoResponse }{@code >}}
      * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link VenderTicketResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "venderTicketResponse")
-    public JAXBElement<VenderTicketResponse> createVenderTicketResponse(VenderTicketResponse value) {
-        return new JAXBElement<VenderTicketResponse>(_VenderTicketResponse_QNAME, VenderTicketResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://antel.com.uy/", name = "ecoResponse")
+    public JAXBElement<EcoResponse> createEcoResponse(EcoResponse value) {
+        return new JAXBElement<EcoResponse>(_EcoResponse_QNAME, EcoResponse.class, null, value);
     }
 
 }

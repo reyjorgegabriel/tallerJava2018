@@ -1,7 +1,6 @@
 package uy.com.antel;
 
 import java.io.*;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServidorClienteIndividual implements Runnable {
@@ -13,7 +12,7 @@ public class ServidorClienteIndividual implements Runnable {
         socketRecepcion = socketAAtender;
     }
 
-    @Override
+    //@Override
     public void run() {
         try {
             //ServerSocket socket = new ServerSocket(1500);
@@ -27,7 +26,7 @@ public class ServidorClienteIndividual implements Runnable {
             String contraseña;
             String terminal;
 
-            ResultadoOperacion respuesta = new ResultadoOperacion();
+            ResultadoOperacionPosta respuesta = new ResultadoOperacionPosta();
 
             ObjectInputStream StreamParaObjetosLectura = new ObjectInputStream(socketRecepcion.getInputStream());
 
@@ -69,6 +68,8 @@ public class ServidorClienteIndividual implements Runnable {
 
             int contadorIteraicones = 0;
 
+            AdminTicketsAgencia administrador = AdminTicketsAgencia.getInstance();
+
             while (true) {
 
                 //System.out.println("\nEsperando lectura tickets del usuario " + usuario + "...");
@@ -85,12 +86,10 @@ public class ServidorClienteIndividual implements Runnable {
                     //AUNQUE EN ESTA CLASE SE VEA CORRECTAMENTE EL VALOR ACTUALIZADO.
                     //CONSULTAR POQUE SE DA ESTO, YA QUE NO DEBERIA PASAR. QUIZAS SEA UN PROBLEMA INTERNO DE LAS CLASES
                     //QUE IMPREMENTAN LA CONEXION.
-                    respuesta = new ResultadoOperacion();
+                    respuesta = new ResultadoOperacionPosta();
 
-                    //Llamar a la función que devuelve el número de ticket.
-                    respuesta.setCodResultado(0 + contadorIteraicones);
-                    respuesta.setImporte(100);
-                    respuesta.setMsjResultado("Todo bien");
+                    //Llama a la función que agrega el tikcket y devuelve su número.
+                    respuesta = administrador.venderTicket(ticket,terminal);
 
                 } else if (ObjetoRecibido instanceof Integer) {
                     Integer NroTicketAEliminar = (Integer) ObjetoRecibido;
@@ -101,12 +100,10 @@ public class ServidorClienteIndividual implements Runnable {
                     //AUNQUE EN ESTA CLASE SE VEA CORRECTAMENTE EL VALOR ACTUALIZADO.
                     //CONSULTAR POQUE SE DA ESTO, YA QUE NO DEBERIA PASAR. QUIZAS SEA UN PROBLEMA INTERNO DE LAS CLASES
                     //QUE IMPREMENTAN LA CONEXION.
-                    respuesta = new ResultadoOperacion();
+                    respuesta = new ResultadoOperacionPosta();
 
-                    //Llamar eliminación de ticket.
-                    respuesta.setCodResultado(-3 + contadorIteraicones);
-                    respuesta.setMsjResultado("    Error!!");
-
+                    //Llama a funcion para eliminación de ticket.
+                    respuesta = administrador.anularTicket(NroTicketAEliminar);
 
                 } else if (ObjetoRecibido instanceof String) {
                     String mensaje = (String) ObjetoRecibido;
@@ -114,12 +111,11 @@ public class ServidorClienteIndividual implements Runnable {
                     if (mensaje.equals("salida")) {
                         System.out.println("     ---El usuario " + usuario + " ha finalizado la conexión.---");
 
-                        //Se envia mensaje a cliente que se cierra el servidor
+                        //Se envia mensaje a cliente que se cierra el servidor.
+                        //No es ecesario hacer socket.close(), ni socketRecepcion.close(), ni lectura.close(), ni StreamParaObjetosLectura.close();
+                        //alcanzando enviar mensaje de salida al cliente y haciendo return.
                         SrteamParaObjetosRespuesta.writeObject("salida");
-                        //socket.close();
-                        //socketRecepcion.close();
-                        //lectura.close();
-                        //StreamParaObjetosLectura.close();
+
                         return;
                     }
                 }

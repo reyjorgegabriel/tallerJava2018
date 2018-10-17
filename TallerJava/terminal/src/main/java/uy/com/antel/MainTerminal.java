@@ -14,7 +14,7 @@ public class MainTerminal {
         String comando;
 
 
-        ResultadoOperacion RespuestaObjeto;
+        ResultadoOperacionPosta RespuestaObjeto;
 
         BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 
@@ -100,7 +100,7 @@ public class MainTerminal {
                                 minutos = Integer.parseInt(componentesComando[4]);
                                 TicketTerminal ticketTerminal = new TicketTerminal(componentesComando[1], fechaYhora, minutos);
 
-                                RespuestaObjeto = (ResultadoOperacion) conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
+                                RespuestaObjeto = (ResultadoOperacionPosta) conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
 
                                 salida.println("-Respuesta de la agencia: " + RespuestaObjeto.toString());
 
@@ -138,7 +138,7 @@ public class MainTerminal {
                                 minutos = Integer.parseInt(componentesComando[2]);
                                 TicketTerminal ticketTerminal = new TicketTerminal(componentesComando[1], minutos);
 
-                                RespuestaObjeto = (ResultadoOperacion) conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
+                                RespuestaObjeto = (ResultadoOperacionPosta) conecxionAgencia.enviarDatoAAgencia(ticketTerminal);
 
                                 salida.println("-Respuesta de la agencia: " + RespuestaObjeto.toString());
 
@@ -174,7 +174,7 @@ public class MainTerminal {
 
                                 salida.println("Eliminando ticket " + NroTicket + "...");
 
-                                RespuestaObjeto = (ResultadoOperacion) conecxionAgencia.enviarDatoAAgencia(NroTicket);
+                                RespuestaObjeto = (ResultadoOperacionPosta) conecxionAgencia.enviarDatoAAgencia(NroTicket);
 
                                 salida.println("-Respuesta de la agencia: " + RespuestaObjeto.toString());
 

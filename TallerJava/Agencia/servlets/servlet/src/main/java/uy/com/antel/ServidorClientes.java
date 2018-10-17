@@ -9,7 +9,7 @@ public class ServidorClientes implements Runnable {
     public void run() {
 
         try {
-            ServerSocket socketServidor = new ServerSocket(1500);
+            ServerSocket socketServidor = new ServerSocket(1501);
 
             System.out.println("Se inicia el servidor para recibir conexiones de todas las terminales.\n");
 
@@ -34,7 +34,7 @@ public class ServidorClientes implements Runnable {
             }
 
         } catch (IOException e) {
-            System.out.println("ERROR: Problemas en el Servidor para leer/escribir objeto.");
+            System.out.println("Clase ServidorClientes:: ERROR: Problemas en el Servidor para leer/escribir objeto.");
             e.printStackTrace();
         }
 

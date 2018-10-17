@@ -1,5 +1,5 @@
 uy\com\antel\ConexionCliente.class
-uy\com\antel\mainServer.class
 uy\com\antel\FormatoIncorrectoFechaException.class
 uy\com\antel\MainTerminal.class
 uy\com\antel\TicketTerminal.class
+uy\com\antel\Credenciales.class

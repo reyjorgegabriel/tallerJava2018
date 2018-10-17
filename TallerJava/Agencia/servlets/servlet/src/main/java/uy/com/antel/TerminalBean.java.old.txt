@@ -49,7 +49,7 @@ public class TerminalBean {
         WebServiceServletService svc = new WebServiceServletService();
         WebServiceServlet wss = svc.getWebServiceServletPort();
         int numTicket = getIdTicket();
-        ResultadoOperacionPosta ro = wss.anularTicket(numTicket,"SuperAgente86");
+        ResultadoOperacion ro = wss.anularTicket(numTicket,"SuperAgente86");
 
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
                                 "Codigo: " + ro.getCodResultado() +
@@ -103,7 +103,7 @@ public class TerminalBean {
         t.setFechaHoraInicio(xmlGcInicio);
         t.setMinutos(190);
 
-        ResultadoOperacionPosta ro = wss.venderTicket(t,"SuperAgente86");
+        ResultadoOperacion ro = wss.venderTicket(t,"SuperAgente86");
         System.out.println(ro.msjResultado);
 
 
@@ -113,50 +113,6 @@ public class TerminalBean {
         FacesContext.getCurrentInstance().addMessage(null, message);
 
 
-    }
-
-
-    public void probarVenta(){
-        System.out.println("TerminalBean.probarVenta()");
-        AdminTicketsAgencia ata =AdminTicketsAgencia.getInstance();
-        TicketTerminal ticketTerminal = new TicketTerminal();
-        ticketTerminal.setMatricula(getEntrada());
-        ticketTerminal.setMinutosEstacionamiento(190);
-
-        Date ahora = new Date();
-        Calendar cVenta = new GregorianCalendar();
-        cVenta.setTime(ahora);
-        ticketTerminal.setFechaVenta(cVenta);
-
-        Calendar cInicio = new GregorianCalendar();
-        cInicio.set(Calendar.YEAR, 2018);
-        cInicio.set(Calendar.MONTH,Calendar.SEPTEMBER);
-        cInicio.set(Calendar.DAY_OF_MONTH, 30);
-        cInicio.set(Calendar.HOUR, 12);
-        cInicio.set(Calendar.MINUTE, 20);
-        cInicio.set(Calendar.SECOND, 00);
-        ticketTerminal.setFechaInicio(cInicio);
-
-        ResultadoOperacionPosta ro = ata.venderTicket(ticketTerminal,"terminal1");
-        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
-                "Matrícula: " + ticketTerminal.getMatricula() +
-                        " Codigo: " + ro.getCodResultado() +
-                        ", Mensaje: " + ro.getMsjResultado() +
-                        ", Ticket: " + ro.getIdTicket() +
-                        ", Importe: " + ro.getImporte(), "respuesta:");
-        FacesContext.getCurrentInstance().addMessage(null, message);
-    }
-
-    public void probarAnulacion(){
-        System.out.println("TerminalBean.probarAnulacion()");
-        AdminTicketsAgencia ata =AdminTicketsAgencia.getInstance();
-        ResultadoOperacionPosta ro = ata.anularTicket(getIdTicket());
-        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
-                "Codigo: " + ro.getCodResultado() +
-                        ", Mensaje: " + ro.getMsjResultado() +
-                        ", Ticket: " + ro.getIdTicket() +
-                        ", Importe: " + ro.getImporte(), "respuesta:");
-        FacesContext.getCurrentInstance().addMessage(null, message);
     }
 
 }
