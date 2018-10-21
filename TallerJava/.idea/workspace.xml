@@ -31,88 +31,129 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ServidorClienteIndividual.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/ServidorClienteIndividual.java">
+      <file leaf-file-name="AdminUsuariosAgencia.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/AdminUsuariosAgencia.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="94" column="12" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+            <state relative-caret-position="-204">
+              <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5109#5117#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebServiceServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServlet.java">
+      <file leaf-file-name="EliminarUsuarioBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/EliminarUsuarioBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#342#343#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#439#440#0" expanded="true" />
+                <element signature="e#487#488#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConexionCliente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/ConexionCliente.java">
+      <file leaf-file-name="CrearUsuarioBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/CrearUsuarioBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-203">
-              <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
+            <state relative-caret-position="379">
+              <caret line="34" column="68" selection-start-line="32" selection-start-column="8" selection-end-line="34" selection-end-column="68" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
+                <element signature="e#305#306#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#385#386#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Credenciales.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/Credenciales.java">
+      <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/admin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="340">
+              <caret line="26" column="23" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="26" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FormatoIncorrectoFechaException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/FormatoIncorrectoFechaException.java">
+      <file leaf-file-name="eliminarusuario.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/eliminarusuario.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="238">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainTerminal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/MainTerminal.java">
+      <file leaf-file-name="cambiarclaveusuario.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/cambiarclaveusuario.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1529">
-              <caret line="104" column="48" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
+            <state relative-caret-position="218">
+              <caret line="43" column="11" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="43" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketTerminal.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/TicketTerminal.java">
+      <file leaf-file-name="CambiarClaveUsuarioBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/CambiarClaveUsuarioBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
+            <state relative-caret-position="218">
+              <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#576#577#0" expanded="true" />
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#708#709#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#778#779#0" expanded="true" />
+                <element signature="e#812#813#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#875#876#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketTerminal.java.old.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/TicketTerminal.java.old.txt">
+      <file leaf-file-name="terminal.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/terminal.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="ServletOpciones.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/ServletOpciones.java">
+      <file leaf-file-name="crearusuario.xhtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/crearusuario.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TicketIntendencia.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/TicketIntendencia.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
+            <state relative-caret-position="595">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -122,6 +163,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -137,6 +179,7 @@
     <dirStrings>
       <dir>C:\Users\Usuario\IdeaProjects\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel</dir>
       <dir>D:\IdeaProjects\clonado2\tallerJava2018\TallerJava</dir>
+      <dir>F:\IdeaProjects\tallerJava2018\TallerJava\Intendencia\servlets\servlet\src\main\java\uy\com\antel</dir>
     </dirStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -180,6 +223,15 @@
         <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/ServidorClienteIndividual.java" />
         <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/ServidorClientes.java" />
         <option value="$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/AdminTicketsIntendencia.java" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/WEB-INF/admin.html" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/CrearUsuarioBean.java" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/EliminarUsuarioBean.java" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/admin.html" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/cambiarclaveusuario.xhtml" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/crearusuario.xhtml" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/eliminarusuario.xhtml" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/CambiarClaveUsuarioBean.java" />
+        <option value="$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/AdminUsuariosAgencia.java" />
       </list>
     </option>
   </component>
@@ -211,10 +263,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="168" />
+    <option name="x" value="10" />
     <option name="y" value="20" />
-    <option name="width" value="1300" />
-    <option name="height" value="823" />
+    <option name="width" value="1260" />
+    <option name="height" value="920" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -223,7 +275,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,6 +351,17 @@
             <path>
               <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
+              <item name="Agencia" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -326,7 +388,54 @@
             <path>
               <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
+              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
+              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
+              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
+              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
+              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
+              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="servlet" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -336,57 +445,11 @@
               <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
               <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
               <item name="servlets" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TallerJava" type="462c0819:PsiDirectoryNode" />
-              <item name="Intendencia" type="462c0819:PsiDirectoryNode" />
-              <item name="servlets" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="antel" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TallerJava" type="b2602c69:ProjectViewProjectNode" />
@@ -427,17 +490,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="proyecto-aparte-terminal&#9;null&#9;null&#10;ter&#9;ACTION&#9;ActivateTerminalToolWindow" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../faces01" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\webapp" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="uy.com.antel" />
     </key>
@@ -445,6 +513,7 @@
       <recent name="uy.com.antel" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\webapp" />
       <recent name="C:\Users\Usuario\IdeaProjects\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel" />
       <recent name="C:\Users\Usuario\IdeaProjects\TallerJava\Agencia\servlets\servlet\src\main\webapp" />
       <recent name="C:\Users\Usuario\IdeaProjects\TallerJava\Intendencia\servlets\servlet\src\main\java\uy\com\antel" />
@@ -577,22 +646,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.38004485" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.355" side_tool="true" weight="0.23076923" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.16953126" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.169375" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.645" weight="0.4058296" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.499375" weight="0.25032595" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.645" weight="0.4055118" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.499375" visible="true" weight="0.38451442" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.26328126" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.228125" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32881355" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -604,7 +673,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.32881355" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.38004485" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -616,43 +685,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Intendencia/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="98" column="34" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/AltaTicket.java" />
-    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/proyecto aparte terminal/src/main/java/uy/com/antel/ConexionCliente.java" />
     <entry file="file://$PROJECT_DIR$/proyecto aparte terminal/pom.xml" />
     <entry file="file://$PROJECT_DIR$/terminal/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -669,30 +701,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/mainServer_borrar.java" />
-    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/terminal.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/notas.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="160" column="39" selection-start-line="160" selection-start-column="39" selection-end-line="160" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/a imp, temp, etc/uy/com/antel/WebServiceServletService.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/a imp, temp, etc/uy/com/antel/AnularTicket.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/AdminTicketsAgencia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="64" column="52" selection-start-line="64" selection-start-column="52" selection-end-line="64" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -738,9 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/package-info.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/ResultadoOperacion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-594">
@@ -762,16 +771,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/TerminalBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-98">
-          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/TerminalBean.java.old.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-765" />
@@ -781,13 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-391">
           <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/VenderTicket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -802,13 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-458">
           <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServletService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -830,13 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/AdminTicketsIntendencia.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -868,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/ServletOpciones.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
+        <state relative-caret-position="102">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
@@ -882,14 +860,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
+        <state relative-caret-position="391">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/ConexionCliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
+        <state relative-caret-position="901">
           <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
         </state>
       </provider>
@@ -903,17 +881,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/MainTerminal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1529">
+        <state relative-caret-position="1717">
           <caret line="104" column="48" selection-start-line="104" selection-start-column="48" selection-end-line="104" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/TicketTerminal.java.old.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/terminal/src/main/java/uy/com/antel/TicketTerminal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="1224">
           <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
         </state>
       </provider>
@@ -927,8 +902,163 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/ServidorClienteIndividual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="94" column="12" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+        <state relative-caret-position="1972">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/WebServiceServletService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/webapp/opciones_.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/VenderTicket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/AdminTicketsAgencia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1555">
+          <caret line="122" column="16" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Intendencia/servlets/servlet/src/main/java/uy/com/antel/AdminTicketsIntendencia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-137">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/TerminalBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/CrearUsuarioBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="34" column="68" selection-start-line="32" selection-start-column="8" selection-end-line="34" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/terminal.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/EliminarUsuarioBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="26" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/cambiarclaveusuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="43" column="11" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="43" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/eliminarusuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/webapp/crearusuario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/CambiarClaveUsuarioBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#576#577#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Agencia/servlets/servlet/src/main/java/uy/com/antel/AdminUsuariosAgencia.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5109#5117#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

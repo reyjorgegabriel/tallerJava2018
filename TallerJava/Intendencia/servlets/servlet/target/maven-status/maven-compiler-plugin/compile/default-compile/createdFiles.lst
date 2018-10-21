@@ -1,7 +1,7 @@
 uy\com\antel\ServletAutenticar.class
 uy\com\antel\AdminTicketsIntendencia.class
-uy\com\antel\ServletListaTicketsIntendencia.class
 uy\com\antel\WebServiceServlet.class
+uy\com\antel\ServletListaTicketsIntendencia.class
 uy\com\antel\FiltroSesion.class
 uy\com\antel\ServletOpciones.class
 uy\com\antel\TicketIntendencia.class
