@@ -5,6 +5,7 @@ uy\com\antel\EliminarUsuarioBean.class
 uy\com\antel\CrearUsuarioBean.class
 uy\com\antel\ServidorClientes.class
 uy\com\antel\BORRAR_Despues_pruebaTemp.class
+uy\com\antel\DesasignarTerminalUsuarioBean.class
 uy\com\antel\WebServiceServlet.class
 uy\com\antel\AdminUsuariosAgencia.class
 uy\com\antel\WebServiceServletService.class
