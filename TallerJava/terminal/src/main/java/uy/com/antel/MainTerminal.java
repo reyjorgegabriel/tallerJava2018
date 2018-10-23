@@ -23,38 +23,59 @@ public class MainTerminal {
         //Creo la clase para poder conectarse con la agencia.
         ConexionCliente conecxionAgencia = new ConexionCliente();
 
-        salida.println("\nIngrese usuario:");
+        boolean usuarioValidado = false;
 
-        try {
-            usuario = entrada.readLine();
-        } catch (IOException e) {
-            salida.println("\nNo se pudo leer el usuario correctamente.");
-            //e.printStackTrace();
-        }
+        do {
+            salida.println("\nIngrese usuario:");
 
-        salida.println("\nIngrese la contraseña:");
-        try {
-            contraseña = entrada.readLine();
-        } catch (IOException e) {
-            salida.println("\nNo se pudo leer la contraseña correctamente:");
-            //e.printStackTrace();
-        }
+            try {
+                usuario = entrada.readLine();
+            } catch (IOException e) {
+                salida.println("\nNo se pudo leer el usuario correctamente.");
+                //e.printStackTrace();
+            }
 
-        //VER DE OBTENER EL NOMBRE DE LA TERMINAL SE PONE HARDCODEADO AHORA.
+            salida.println("\nIngrese la contraseña:");
+            try {
+                contraseña = entrada.readLine();
+            } catch (IOException e) {
+                salida.println("\nNo se pudo leer la contraseña correctamente:");
+                //e.printStackTrace();
+            }
 
-        String NombTerminal = "La Terminal";
+            //VER DE OBTENER EL NOMBRE DE LA TERMINAL SE PONE HARDCODEADO AHORA.
+            String NombTerminal = "La Terminal";
 
-        Credenciales infoUsuario = new Credenciales(usuario, contraseña, NombTerminal );
+            Credenciales infoUsuario = new Credenciales(usuario, contraseña, NombTerminal);
 
-        if ( ((String) conecxionAgencia.enviarDatoAAgencia(infoUsuario)).equals("Error") ) {
-            salida.println("\nAcceso incorrecto. Reinicie la terminal.\n");
-            return;
-        }
+            if (((String) conecxionAgencia.enviarDatoAAgencia(infoUsuario)).equals("Acceso incorrecto")) {
+                salida.println("\n ----- ACCESO INCORRECTO ----- \n");
+
+                salida.println("Si desea cerrar la terminal ingrese \"salilda\".");
+                salida.println("\nSi desea intentar con otro usuario y/o contraseña ingrese \"continuar\" u otro valor.");
+
+                String opcionUsuario = "";
+
+                try {
+                    opcionUsuario = entrada.readLine();
+                } catch (IOException e) {
+                    salida.println("\nNo se pudo leer correctamente lo ingresado.");
+                    //e.printStackTrace();
+                }
+
+                if (opcionUsuario.equals("salida")) {
+                    salida.println("\nSaliendo de la terminal a instancias del usuario.\n");
+                    conecxionAgencia.enviarDatoAAgencia("salida");
+                    return;
+                }
+
+            } else {
+                usuarioValidado = true;
+            }
+
+        } while (! usuarioValidado);
 
         salida.println("\nAcceso correcto.");
-
-        //FUNCION PARA VALIDAR USUARIO Y CONTRASEÑA CON LA AGENCIA Y RESPONDER EN CONSECUENCIA.
-
 
         salida.println("\n    ---Inicio de interfaz de ingreso de comandos para venta y anulación de tickets. ---");
 

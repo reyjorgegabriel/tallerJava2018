@@ -18,10 +18,7 @@ public class ServidorClienteIndividual implements Runnable {
             //ServerSocket socket = new ServerSocket(1500);
 
             System.out.println("--Se inicia el servidor para atender a una nueva terminal que quiere conectarse.");
-            //Socket socketRecepcion;
-            //socketRecepcion = socket.accept();
-            ////BufferedReader lectura;
-            ////lectura = new BufferedReader(new InputStreamReader(socketRecepcion.getInputStream()));
+
             String usuario;
             String contraseña;
             String terminal;
@@ -30,41 +27,81 @@ public class ServidorClienteIndividual implements Runnable {
 
             ObjectInputStream StreamParaObjetosLectura = new ObjectInputStream(socketRecepcion.getInputStream());
 
-            PrintWriter escritura;
-            escritura = new PrintWriter(socketRecepcion.getOutputStream(), true);
-
             //Objeto para usar para enviar objeto de respuesta.
             ObjectOutputStream SrteamParaObjetosRespuesta = new ObjectOutputStream(socketRecepcion.getOutputStream());
 
-            System.out.println("Esperando lectura de usuario y terminal cliente...");
+            AdminUsuariosAgencia controlAcceso = AdminUsuariosAgencia.getInstance();
 
-            Object ObjetoRecibido = StreamParaObjetosLectura.readObject();
+            Object ObjetoRecibido;
 
-            if (!(ObjetoRecibido instanceof Credenciales)) {
-                System.out.println("No se ha recibido credencial del usuario para conectarse.");
-                escritura.println("Error!!");
-                return;
-            }
+            boolean AccesoPermitido = false;
 
-            SrteamParaObjetosRespuesta.writeObject("Acceso correcto");
+            do {
 
-            Credenciales datosUsuario = (Credenciales) ObjetoRecibido;
+                System.out.println("Esperando lectura de usuario y terminal cliente...");
 
-            usuario = datosUsuario.getUsuario();
+                ObjetoRecibido = StreamParaObjetosLectura.readObject();
 
-            contraseña = datosUsuario.getContraseña();
+                if (ObjetoRecibido instanceof String) {
+                    if (((String) ObjetoRecibido).equals("salida")) {
+                        System.out.println("     \\\\\\--- Usuario ha desistido de conectarse. ---\\\\\\");
 
-            terminal = datosUsuario.getTerminal();
+                        //Se envia mensaje a cliente que se cierra el servidor.
+                        //No es ecesario hacer socket.close(), ni socketRecepcion.close(), ni lectura.close(), ni StreamParaObjetosLectura.close();
+                        //alcanzando enviar mensaje de salida al cliente y haciendo return.
+                        SrteamParaObjetosRespuesta.writeObject("salida");
+                        return;
+                    } else {
+                        System.out.println("     \\\\\\---Se reusa la conexion por envio string incorrecto.---\\\\\\");
 
-            System.out.println("Conexión establecida con exito. Datos de usuario:");
+                        //Se envia mensaje a cliente que se cierra el servidor.
+                        //No es ecesario hacer socket.close(), ni socketRecepcion.close(), ni lectura.close(), ni StreamParaObjetosLectura.close();
+                        //alcanzando enviar mensaje de salida al cliente y haciendo return.
+                        SrteamParaObjetosRespuesta.writeObject("salida");
+                        return;
+                    }
+                } else if (!(ObjetoRecibido instanceof Credenciales)) {
+                    System.out.println("Error!!: No se ha recibido credencial del usuario para conectarse.");
+                    SrteamParaObjetosRespuesta.writeObject("ERROR!!");
+                    return;
+                }
+
+                Credenciales datosUsuario = (Credenciales) ObjetoRecibido;
+
+                usuario = datosUsuario.getUsuario();
+
+                contraseña = datosUsuario.getContraseña();
+
+                terminal = datosUsuario.getTerminal();
+
+                // Sustitur esto por la llamada al objeto de Jorge.
+                if (controlAcceso.validarAcceso(datosUsuario)) {
+
+                    System.out.println("Conexión establecida con exito.");
+
+                    SrteamParaObjetosRespuesta.writeObject("Acceso correcto");
+
+                    AccesoPermitido = true;
+
+                } else {
+
+                    System.out.println("Acceso incorrecto: Usuario: " + usuario + ". Contraseña: " + contraseña);
+
+                    SrteamParaObjetosRespuesta.writeObject("Acceso incorrecto");
+                }
+
+
+            } while (! AccesoPermitido);
+
+            ///PONER CODIGO PARA VALIDAR ACCESO A LA AGENCIA.
+
+            System.out.println("Datos de usuario conectado:");
 
             System.out.println("        Usuario: " + usuario);
 
             System.out.println("        Contraseña: " + contraseña);
 
             System.out.println("        Terminal donde se conecta: " + terminal);
-
-            //PONERO CODIGO PARA VALIDAR EL USUARIO.
 
             int contadorIteraicones = 0;
 

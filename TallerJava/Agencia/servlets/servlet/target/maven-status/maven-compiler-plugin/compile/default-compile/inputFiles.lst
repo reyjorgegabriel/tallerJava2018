@@ -1,28 +1,28 @@
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\package-info.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\EliminarUsuarioBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ServidorClientes.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\BORRAR_Despues_pruebaTemp.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AutorizarTerminalUsuarioBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\VenderTicket.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\DesasignarTerminalUsuarioBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\TerminalBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\WebServiceServlet.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\CambiarClaveUsuarioBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\CrearTerminalBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\DesasignarTerminalUsuarioBean_old.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AnularTicket.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\Ticket.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\EcoResponse.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AdminTicketsAgencia.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ResultadoOperacion.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\VenderTicketResponse.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AnularTicketResponse.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\EliminarTerminalBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\Eco.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AdminUsuariosAgencia.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\probarCredencialesBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\WebServiceServletService.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ObjectFactory.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ServletServidorAgenciaATerminales.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\CrearUsuarioBean.java
-F:\IdeaProjects\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ServidorClienteIndividual.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AnularTicket.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ObjectFactory.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\Ticket.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\WebServiceServlet.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AdminTicketsAgencia.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\DesasignarTerminalUsuarioBean_old.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\EliminarTerminalBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AdminUsuariosAgencia.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ServletServidorAgenciaATerminales.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\VenderTicketResponse.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\BORRAR_Despues_pruebaTemp.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AutorizarTerminalUsuarioBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\AnularTicketResponse.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\package-info.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\CrearTerminalBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\Eco.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\DesasignarTerminalUsuarioBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\EcoResponse.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\TerminalBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\CrearUsuarioBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\VenderTicket.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\CambiarClaveUsuarioBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\WebServiceServletService.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\probarCredencialesBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ResultadoOperacion.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\EliminarUsuarioBean.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ServidorClienteIndividual.java
+D:\Leonardo\cursmio\3-Informatica\x-programas\Desarrollador Java (Antel-2018)\Módulo IV - Taller\taller\tallerJava2018\TallerJava\Agencia\servlets\servlet\src\main\java\uy\com\antel\ServidorClientes.java
