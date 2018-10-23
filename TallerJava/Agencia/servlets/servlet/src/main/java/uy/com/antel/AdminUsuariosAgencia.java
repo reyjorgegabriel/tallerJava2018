@@ -201,7 +201,7 @@ public class AdminUsuariosAgencia {
                 ps1.setString(1,terminal);
                 ps1.executeUpdate();
                 ps1.close();
-                resultado = "Se agregó el usuario con éxito";
+                resultado = "Se agregó el terminal con éxito";
             }
             else
             {
@@ -220,7 +220,7 @@ public class AdminUsuariosAgencia {
     }
 
     public String eliminarTerminal(String terminal){
-        //TODO verificar que el usuario no es nulo
+        //TODO verificar que el terminal no es nulo
         String resultado;
         InitialContext initContext;
         try{
@@ -270,6 +270,164 @@ public class AdminUsuariosAgencia {
         return resultado;
 
     }
+
+    public String asignarTerminalUsuario(String terminal, String usuario){
+
+        String resultado;
+        InitialContext initContext;
+        try {
+            initContext = new InitialContext();
+            DataSource ds;
+            ds = (DataSource) initContext.lookup("java:jboss/datasources/MySqlDS1");
+            Connection conn = ds.getConnection();
+
+            //verificar que el terminal existe
+            //y obtener su identificación
+
+            String existeTerminal = "select * from terminales where terminal = ?";
+            PreparedStatement ps = conn.prepareStatement(existeTerminal);
+            ps.setString(1, terminal);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                //el terminal existe
+                int idTerminal = rs.getInt("idTerminal");
+
+                String existeUsuario = "select * from usuarios where usuario = ?";
+                PreparedStatement ps1 = conn.prepareStatement(existeUsuario);
+                ps1.setString(1, usuario);
+                ResultSet rs1 = ps1.executeQuery();
+                if (rs1.next()){
+                    //el usuario existe
+                    int idUsuario = rs1.getInt("idUsuario");
+
+                    //verificar si la autorización existe, en caso contrasrio crearla
+                    String existeAutorizacion = "select * from autorizaciones where idUsuario = ? and idTerminal = ?";
+                    PreparedStatement ps2 = conn.prepareStatement(existeAutorizacion);
+                    ps2.setInt(1, idUsuario);
+                    ps2.setInt(2, idTerminal);
+                    ResultSet rs2 = ps2.executeQuery();
+                    if (rs2.next()) {
+                        //la autorización existe
+                        resultado = "La autorización ya existe";
+                    }
+                    else{
+                        //creamos nueva autorización
+                        String agregarAutorizacion = "insert into autorizaciones (idUsuario, idTerminal) values (?, ?)";
+                        PreparedStatement ps3 = conn.prepareStatement(agregarAutorizacion);
+                        ps3.setInt(1,idUsuario);
+                        ps3.setInt(2,idTerminal);
+                        ps3.executeUpdate();
+                        ps3.close();
+                        resultado = "Se autorizó el terminal con éxito";
+                    }
+                    rs2.close();
+                    ps2.close();
+                }
+                else{
+                    //el usuario no existe
+                    resultado = "El usuario " + usuario + " no existe";
+                }
+                rs1.close();
+                ps1.close();
+            }
+            else{
+                //el terminal no existe
+                resultado = "el terminal " +terminal + "no existe";
+
+            }
+            rs.close();
+            ps.close();
+            conn.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            resultado = "Se produjo un error de acceso a la base de datos";
+        }
+        return resultado;
+
+    }
+
+    public String desasignarTerminalUsuario(String terminal, String usuario){
+        String resultado;
+
+        InitialContext initContext;
+        try {
+            initContext = new InitialContext();
+            DataSource ds;
+            ds = (DataSource) initContext.lookup("java:jboss/datasources/MySqlDS1");
+            Connection conn = ds.getConnection();
+
+            //verificar que el terminal existe
+            //y obtener su identificación
+
+            String existeTerminal = "select * from terminales where terminal = ?";
+            PreparedStatement ps = conn.prepareStatement(existeTerminal);
+            ps.setString(1, terminal);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()){
+                //el terminal existe
+                int idTerminal = rs.getInt("idTerminal");
+
+                String existeUsuario = "select * from usuarios where usuario = ?";
+                PreparedStatement ps1 = conn.prepareStatement(existeUsuario);
+                ps1.setString(1, usuario);
+                ResultSet rs1 = ps1.executeQuery();
+                if (rs1.next()){
+                    //el usuario existe
+                    int idUsuario = rs1.getInt("idUsuario");
+
+                    //verificar si la autorización existe. Si existe, quitarla.
+                    String existeAutorizacion = "select * from autorizaciones where idUsuario = ? and idTerminal = ?";
+                    PreparedStatement ps2 = conn.prepareStatement(existeAutorizacion);
+                    ps2.setInt(1, idUsuario);
+                    ps2.setInt(2, idTerminal);
+                    ResultSet rs2 = ps2.executeQuery();
+                    if (rs2.next()) {
+                        //la autorización existe
+                        String agregarAutorizacion = "delete from autorizaciones where idUsuario = ? and idTerminal = ?";
+                        PreparedStatement ps3 = conn.prepareStatement(agregarAutorizacion);
+                        ps3.setInt(1,idUsuario);
+                        ps3.setInt(2,idTerminal);
+                        ps3.executeUpdate();
+                        ps3.close();
+
+                        resultado = "Se suprimió la autorización con éxito";
+                    }
+                    else{
+                        //la autorización no existe
+
+                        resultado = "El usuario no estaba autorizado a usar ese terminal";
+                    }
+                    rs2.close();
+                    ps2.close();
+                }
+                else{
+                    //el usuario no existe
+                    resultado = "El usuario " + usuario + " no existe";
+                }
+                rs1.close();
+                ps1.close();
+            }
+            else{
+                //el terminal no existe
+                resultado = "el terminal " +terminal + "no existe";
+
+            }
+            rs.close();
+            ps.close();
+            conn.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            resultado = "Se produjo un error de acceso a la base de datos";
+        }
+
+
+        return resultado;
+    }
+
+
+
 
     public List<String> obtenerListaTerminales(){
         List<String> resultado = new ArrayList<String>();
@@ -347,12 +505,21 @@ public class AdminUsuariosAgencia {
             ds = (DataSource) initContext.lookup("java:jboss/datasources/MySqlDS1");
             Connection conn = ds.getConnection();
 
-            String usuarioAutorizado = "select * from usuarios where usuario = ? and clave = ?";
+            //String usuarioAutorizado = "select * from usuarios where usuario = ? and clave = ?";
+
+            String usuarioAutorizado = "SELECT usuarios.usuario, usuarios.clave, terminales.terminal " +
+                    "FROM terminales INNER JOIN (usuarios INNER JOIN autorizaciones ON " +
+                    "usuarios.IdUsuario = autorizaciones.idUsuario) ON " +
+                    "terminales.IdTerminal = autorizaciones.idTerminal " +
+                    "WHERE (((usuarios.usuario) = ? ) AND " +
+                    "((usuarios.clave) = ?) AND " +
+                    "((terminales.terminal) = ? ));";
 
             PreparedStatement ps;
             ps = conn.prepareStatement(usuarioAutorizado);
             ps.setString(1, credenciales.getUsuario());
             ps.setString(2, credenciales.getContraseña());
+            ps.setString(3, credenciales.getTerminal());
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
                 //usuario y clave válidas

@@ -9,25 +9,32 @@
     <title>Administración de usuarios y terminales</title>
 </h:head>
 <h:body>
-    <h2>Quitar la autorización del uso de un terminal.</h2>
-    <h3>Ingresar nombre de usuario y terminal.</h3>
+    <h2>Probar credenciales.</h2>
+    <h3>Ingresar usuario, clave y terminal.</h3>
     <h:form>
         <table>
             <tr>
-                <td><h:outputText value = "Usuario"/></td>
-                <td><h:inputText id = "entrada1_id" value = "#{desasignarTerminalUsuarioBean.usuario}"
+                <td><h:outputText value = "usuario"/></td>
+                <td><h:inputText id = "entrada1_id" value = "#{probarCredencialesBean.usuario}"
                                  required="true" label="entrada1_lb" /></td>
                 <td><h:message for ="entrada1_id"/></td>
             </tr>
             <tr>
-                <td><h:outputText value = "Terminal"/></td>
-                <td><h:inputText id = "entrada2_id" value = "#{desasignarTerminalUsuarioBean.terminal}"
+                <td><h:outputText value = "clave"/></td>
+                <td><h:inputText id = "entrada2_id" value = "#{probarCredencialesBean.clave}"
                                  required="true" label="entrada2_lb" /></td>
                 <td><h:message for ="entrada2_id"/></td>
             </tr>
             <tr>
+                <td><h:outputText value = "terminal"/></td>
+                <td><h:inputText id = "entrada3_id" value = "#{probarCredencialesBean.terminal}"
+                                 required="true" label="entrada3_lb" /></td>
+                <td><h:message for ="entrada3_id"/></td>
+            </tr>
+
+            <tr>
                 <td></td>
-                <td><h:commandButton action = "#{desasignarTerminalUsuarioBean.desasignarTerminalUsuario}" value ="desasignar"/></td>
+                <td><h:commandButton action = "#{probarCredencialesBean.probarCredenciales}" value ="probar"/></td>
             </tr>
         </table>
         <h:messages style = "color:blue;margin:8px;" />

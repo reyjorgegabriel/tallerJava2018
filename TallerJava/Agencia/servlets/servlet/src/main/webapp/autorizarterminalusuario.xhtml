@@ -9,25 +9,25 @@
     <title>Administración de usuarios y terminales</title>
 </h:head>
 <h:body>
-    <h2>Quitar la autorización del uso de un terminal.</h2>
+    <h2>Autorizar terminal a un usuario.</h2>
     <h3>Ingresar nombre de usuario y terminal.</h3>
     <h:form>
         <table>
             <tr>
                 <td><h:outputText value = "Usuario"/></td>
-                <td><h:inputText id = "entrada1_id" value = "#{desasignarTerminalUsuarioBean.usuario}"
+                <td><h:inputText id = "entrada1_id" value = "#{autorizarTerminalUsuarioBean.usuario}"
                                  required="true" label="entrada1_lb" /></td>
                 <td><h:message for ="entrada1_id"/></td>
             </tr>
             <tr>
                 <td><h:outputText value = "Terminal"/></td>
-                <td><h:inputText id = "entrada2_id" value = "#{desasignarTerminalUsuarioBean.terminal}"
+                <td><h:inputText id = "entrada2_id" value = "#{autorizarTerminalUsuarioBean.terminal}"
                                  required="true" label="entrada2_lb" /></td>
                 <td><h:message for ="entrada2_id"/></td>
             </tr>
             <tr>
                 <td></td>
-                <td><h:commandButton action = "#{desasignarTerminalUsuarioBean.desasignarTerminalUsuario}" value ="desasignar"/></td>
+                <td><h:commandButton action = "#{autorizarTerminalUsuarioBean.autorizarTerminalUsuario}" value ="autorizar"/></td>
             </tr>
         </table>
         <h:messages style = "color:blue;margin:8px;" />

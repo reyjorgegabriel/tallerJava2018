@@ -9,27 +9,22 @@
     <title>Administración de usuarios y terminales</title>
 </h:head>
 <h:body>
-    <h2>Cambiar clave de usuario.</h2>
+    <h2>Eliminar terminal</h2>
     <h:form>
 
         <h:panelGrid columns="2">
 
-            <h:outputText value="seleccione el usuario" />
+            <h:outputText value="seleccione el terminal" />
 
-            <h:selectOneMenu value="#{cambiarClaveUsuarioBean.nombre}" >
-                <f:selectItems value="#{cambiarClaveUsuarioBean.listaNombres}" var = "nombre_usuario"
-                               itemValue = "#{nombre_usuario}"
-                               itemLabel = "#{nombre_usuario}"/>
+            <h:selectOneMenu value="#{eliminarTerminalBean.nombre}" >
+                <f:selectItems value="#{eliminarTerminalBean.listaNombres}" var = "nombre_terminal"
+                               itemValue = "#{nombre_terminal}"
+                               itemLabel = "#{nombre_terminal}"/>
             </h:selectOneMenu>
-
-            <h:outputText value="nueva clave" />
-
-            <h:inputText id = "entrada2_id" value = "#{cambiarClaveUsuarioBean.clave}"
-                         required="true" label="entrada2_lb" />
 
             <h:outputText value="" />
 
-            <h:commandButton action = "#{cambiarClaveUsuarioBean.cambiarClaveUsuario}" value ="Cambiar"/>
+            <h:commandButton action = "#{eliminarTerminalBean.eliminarTerminal}" value ="Eliminar"/>
 
             <h:outputText value="" />
 
@@ -37,14 +32,11 @@
 
         </h:panelGrid>
 
-
     </h:form>
 
     <form action="admin.html">
         <input type="submit" value="volver" />
     </form>
-
-
 
 </h:body>
 </html>

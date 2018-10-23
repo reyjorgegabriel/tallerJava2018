@@ -6,50 +6,38 @@
       xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
-    <title>Cambiar clave de usuario </title>
+    <title>Administración de usuarios y terminales</title>
 </h:head>
 <h:body>
+    <h2>Quitar la autorización del uso de un terminal.</h2>
+    <h3>Ingresar nombre de usuario y terminal.</h3>
     <h:form>
-
-        <h:panelGrid columns="3">
-
-            <h:outputText value="seleccione el usuario" />
-
-            <h:selectOneMenu value="#{desasignarTerminalUsuarioBean.usuarioSeleccionado}" onchange = "submit()"
-                             valueChangeListener="#{desasignarTerminalUsuarioBean.usuarioCambioSeleccion}">
-                <f:selectItems value="#{desasignarTerminalUsuarioBean.listaUsuarios}" var = "nombre_usuario"
-                               itemValue = "#{nombre_usuario}"
-                               itemLabel = "#{nombre_usuario}" />
-            </h:selectOneMenu>
-
-            <h:outputText value= "#{desasignarTerminalUsuarioBean.usuarioSeleccionado}" />
-
-            <h:outputText value="seleccione el terminal" />
-
-            <h:selectOneMenu value="#{desasignarTerminalUsuarioBean.terminalSeleccionado}" >
-                <f:selectItems value="#{desasignarTerminalUsuarioBean.listaTerminales}" var = "nombre_terminal"
-                               itemValue = "#{nombre_terminal}"
-                               itemLabel = "#{nombre_terminal}" />
-            </h:selectOneMenu>
-
-            <h:outputText value="#{desasignarTerminalUsuarioBean.terminalSeleccionado}" />
-
-            <h:outputText value="" />
-
-            <h:outputText value="" />
-
-            <h:messages style = "color:blue;margin:8px;" />
-
-        </h:panelGrid>
-
-
+        <table>
+            <tr>
+                <td><h:outputText value = "Usuario"/></td>
+                <td><h:inputText id = "entrada1_id" value = "#{desasignarTerminalUsuarioBean.usuario}"
+                                 required="true" label="entrada1_lb" /></td>
+                <td><h:message for ="entrada1_id"/></td>
+            </tr>
+            <tr>
+                <td><h:outputText value = "Terminal"/></td>
+                <td><h:inputText id = "entrada2_id" value = "#{desasignarTerminalUsuarioBean.terminal}"
+                                 required="true" label="entrada2_lb" /></td>
+                <td><h:message for ="entrada2_id"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><h:commandButton action = "#{desasignarTerminalUsuarioBean.desasignarTerminalUsuario}" value ="desasignar"/></td>
+            </tr>
+        </table>
+        <h:messages style = "color:blue;margin:8px;" />
     </h:form>
 
     <form action="admin.html">
-        <input type="submit" value="volver" />
+        <input type="submit" value="Volver" />
     </form>
 
 
-
 </h:body>
+
 </html>

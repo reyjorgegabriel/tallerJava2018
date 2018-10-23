@@ -1,16 +1,13 @@
 package uy.com.antel;
 
-import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
-import javax.faces.event.ValueChangeEvent;
-import java.util.List;
 
 @ManagedBean
 @RequestScoped
-public class DesasignarTerminalUsuarioBean {
+public class AutorizarTerminalUsuarioBean {
     private String terminal;
     private String usuario;
 
@@ -30,15 +27,12 @@ public class DesasignarTerminalUsuarioBean {
         this.usuario = usuario;
     }
 
-    public void desasignarTerminalUsuario(){
+    public void autorizarTerminalUsuario(){
         AdminUsuariosAgencia aua = AdminUsuariosAgencia.getInstance();
-        //String respuesta = aua.asignarTerminalUsuario(terminal,usuario);
-        String respuesta = aua.desasignarTerminalUsuario(terminal,usuario);
+        String respuesta = aua.asignarTerminalUsuario(terminal,usuario);
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
                 respuesta, "respuesta:");
         FacesContext.getCurrentInstance().addMessage(null, message);
     }
-
-
 
 }
