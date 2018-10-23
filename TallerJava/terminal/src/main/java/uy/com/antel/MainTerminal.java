@@ -44,14 +44,27 @@ public class MainTerminal {
             }
 
             //VER DE OBTENER EL NOMBRE DE LA TERMINAL SE PONE HARDCODEADO AHORA.
-            String NombTerminal = "La Terminal";
+            //String NombTerminal = "La Terminal";
+
+
+            //PRUEBA LECTURA DEL NOMBRE DEL TERMINAL
+            String NombTerminal = null;
+            salida.println("\nIngrese nombre del terminal:");
+            try {
+                NombTerminal = entrada.readLine();
+            } catch (IOException e) {
+                salida.println("\nNo se pudo leer el nomre del terminal correctamente:");
+                //e.printStackTrace();
+            }
+
+
 
             Credenciales infoUsuario = new Credenciales(usuario, contraseña, NombTerminal);
 
             if (((String) conecxionAgencia.enviarDatoAAgencia(infoUsuario)).equals("Acceso incorrecto")) {
                 salida.println("\n ----- ACCESO INCORRECTO ----- \n");
 
-                salida.println("Si desea cerrar la terminal ingrese \"salilda\".");
+                salida.println("Si desea cerrar la terminal ingrese \"salida\".");
                 salida.println("\nSi desea intentar con otro usuario y/o contraseña ingrese \"continuar\" u otro valor.");
 
                 String opcionUsuario = "";

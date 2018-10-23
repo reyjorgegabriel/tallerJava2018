@@ -485,12 +485,12 @@ public class AdminUsuariosAgencia {
         return resultado;
     }
 
-    public boolean validarAcceso(Credenciales credenciales){
+    public boolean validarAcceso2(Credenciales credenciales){
         //para probar, devuelve siempre verdadero
         return true;
     }
 
-    public boolean validarAcceso2(Credenciales credenciales){
+    public boolean validarAcceso(Credenciales credenciales){
 
         System.out.println(credenciales.getUsuario());
         System.out.println(credenciales.getContraseña());

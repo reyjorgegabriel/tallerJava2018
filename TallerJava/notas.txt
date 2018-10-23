@@ -252,3 +252,18 @@ export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,address=8887,server=y,suspe
 
 wsimport -keep -verbose http://localhost:8080/servlet-imm/eco?wsdl
 
+------------------------------------------------------------------------------------------------------
+localhost:8080/servlet/admin.html
+localhost:8080/servlet/crearusuario.jsf
+localhost:8080/servlet/eliminarusuario.jsf
+localhost:8080/servlet/cambiarclaveusuario.jsf
+localhost:8080/servlet/crearterminal.jsf
+localhost:8080/servlet/eliminarterminal.jsf
+localhost:8080/servlet/autorizarterminalusuario.jsf
+localhost:8080/servlet/desasignarterminalusuario.jsf
+localhost:8080/servlet/probarcredenciales.jsf
+localhost:8080/servlet/desasignarterminalusuario_old.jsf
+
+localhost:8080/servlet-imm/index.html
+localhost:8080/servlet-imm/paginas/opciones
+localhost:8080/servlet-imm/paginas/listartickets

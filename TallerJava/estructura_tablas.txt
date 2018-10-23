@@ -1,0 +1,64 @@
+En intendencia----------------------------------------------------
+------------------------------------------------------------------
+
+tickets
++-----------------+---------------+------+-----+---------+-------+
+| Field           | Type          | Null | Key | Default | Extra |
++-----------------+---------------+------+-----+---------+-------+
+| idTicket        | int(11)       | NO   | PRI | NULL    |       |
+| matricula       | varchar(10)   | YES  |     | NULL    |       |
+| fechaHoraVenta  | datetime      | YES  |     | NULL    |       |
+| fechaHoraInicio | datetime      | YES  |     | NULL    |       |
+| minutos         | int(11)       | YES  |     | NULL    |       |
+| agencia         | varchar(20)   | YES  |     | NULL    |       |
+| importe         | decimal(10,2) | YES  |     | NULL    |       |
+| anulado         | tinyint(1)    | YES  |     | NULL    |       |
++-----------------+---------------+------+-----+---------+-------+
+
+secuencias
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| tabla | varchar(40) | YES  |     | NULL    |       |
+| ident | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+
+En agencia--------------------------------------------------------
+------------------------------------------------------------------
+
+tickets
++----------------+---------------+------+-----+---------+-------+
+| Field          | Type          | Null | Key | Default | Extra |
++----------------+---------------+------+-----+---------+-------+
+| idTicket       | int(11)       | NO   | PRI | NULL    |       |
+| matricula      | varchar(10)   | YES  |     | NULL    |       |
+| fechaHoraVenta | datetime      | YES  |     | NULL    |       |
+| terminal       | varchar(20)   | YES  |     | NULL    |       |
+| importe        | decimal(10,2) | YES  |     | NULL    |       |
+| anulado        | tinyint(1)    | YES  |     | NULL    |       |
++----------------+---------------+------+-----+---------+-------+
+
+usuarios
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| idUsuario | int(11)     | NO   | PRI | NULL    | auto_increment |
+| usuario   | varchar(20) | YES  |     | NULL    |                |
+| clave     | varchar(20) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+terminales
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| idTerminal | int(11)     | NO   | PRI | NULL    | auto_increment |
+| terminal   | varchar(20) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+
+autorizaciones
++------------+---------+------+-----+---------+-------+
+| Field      | Type    | Null | Key | Default | Extra |
++------------+---------+------+-----+---------+-------+
+| idUsuario  | int(11) | NO   |     | NULL    |       |
+| idTerminal | int(11) | NO   |     | NULL    |       |
++------------+---------+------+-----+---------+-------+
