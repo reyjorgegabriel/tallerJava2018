@@ -41,7 +41,7 @@ public class probarCredencialesBean {
         Credenciales c = new Credenciales(usuario, clave, terminal);
         //String respuesta = aua.validarAcceso2(c);
         String propuesta = usuario + " -- " + clave + " -- " + terminal;
-        String permiso = aua.validarAcceso2(c) ? ": sí" : ": no" ;
+        String permiso = aua.validarAcceso(c) ? ": sí" : ": no" ;
 
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO,
                 propuesta + permiso, "respuesta:");
